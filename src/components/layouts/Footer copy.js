@@ -6,18 +6,18 @@ import pagesArr from "@/util/pagesArr";
 
 const Footer = () => {
   return (
-    // the column structure looks good from 1277px viewport width & up
-    // check the bottom padding/margin for the last footer part under the horizontal line
-    // make the rest of the columns responsive now
     <footer className="text-gray-200 bg-white tracking-wide">
+      {" "}
+      {/* done */}
       {/* mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32 */}
-      {/* xl:grid xl:grid-cols-3 xl:gap-8 */}
-      <div className="py-14 px-6 sm:px-10 grid">
-        {/* container for all columns */}
-        <div className="grid md:grid-cols-4 lg:grid-cols-6 grid-cols-1 gap-7">
+      <div className="py-14 px-6 sm:px-10">
+        {" "}
+        {/* done */}
+        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
+          {" "}
+          {/* done */}
           {/* logo & company info */}
-          {/* lg:col-span-4 col-span-12 */}
-          <div className="mb-6 col-span-2">
+          <div className="w-full md:w-1/2 mb-8 md:mb-0">
             <div className="relative w-80 h-40 mb-4">
               <Link href={"/"} className="">
                 <Image
@@ -35,11 +35,8 @@ const Footer = () => {
               autem eligendi commodi accusamus?
             </p>
           </div>
-          {/* other 3 columns */}
-          {/* mt-16  xl:col-span-2 */}
-          <div className="grid grid-cols-2 col-span-4 gap-8  xl:mt-0">
-            {/* md:grid md:grid-cols-2 md:gap-8 */}
-            <div className="grid grid-cols-2 ml-16">
+          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+            <div className="md:grid md:grid-cols-2 md:gap-8">
               {/* Company */}
               <div className="">
                 {/* space-y-4 */}
@@ -76,7 +73,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="ml-16">
+            <div className="md:grid md:grid-cols-1 md:gap-8">
               {/* Contact Us */}
               <div className="">
                 <h4 className="font-semibold text-gray-700">Contact Us</h4>
@@ -91,6 +88,7 @@ const Footer = () => {
           </div>
         </div>
         {/* my-6 lg:my-8 */}
+        {/* below is done */}
         {/* <hr className="my-6 lg:my-8 border-gray-200 sm:mx-auto " /> */}
         {/* //  bottom portion of the footer */}
         <div className="border-t-[1px] border-gray-200 mt-16 pt-8 sm:mt-20 lg:mt-24">
