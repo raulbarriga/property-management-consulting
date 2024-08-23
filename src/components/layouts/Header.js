@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import pagesArr from "@/util/pagesArr";
 // import NavLink from "../NavLink";
 
 const Header = () => {
@@ -26,8 +27,6 @@ const Header = () => {
     }
   };
 
-  const pages = ["Home", "About Us", "Services", "Contact Us"];
-
   return (
     <nav className="bg-white shadow relative">
       {/* px-4 sm:px-6 */}
@@ -50,7 +49,7 @@ const Header = () => {
 
           {/* Nav Menu */}
           <div className="nav-menu hidden md:flex md:items-center md:space-x-4">
-            {pages.map((page) => (
+            {pagesArr.map((page) => (
               <Link
                 key={page}
                 // replaces any space in between words with a dash

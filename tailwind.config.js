@@ -14,6 +14,9 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      screens: {
+        'custom': { 'min': '1024px', 'max': '1500px' }, // custom range from 1500px down
+      }
     },
     keyframes: {
       "open-menu": {

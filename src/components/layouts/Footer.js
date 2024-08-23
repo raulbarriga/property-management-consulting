@@ -2,81 +2,88 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Logo from "../../../public/images/logo.png";
+import pagesArr from "@/util/pagesArr";
 
 const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-gray-900">
-      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <div className="md:flex md:justify-between">
+    <footer className="text-gray-200 bg-white tracking-wide">
+      <div className="py-14 px-6 sm:px-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-10 gap-4">
           {/* logo & company info */}
-          <div className="mb-6 md:mb-0 flex flex-col align-middle max-w-full">
-            <Link href={"/"} className="flex items-center">
-              <Image
-                src={Logo}
-                className="h-8 me-3"
-                alt="Prime PM Consulting Logo"
-              />
-              {/* <div className=""> */}
-                <span className="self-center text-sm font-semibold whitespace-nowrap dark:text-white max-w-full text-center  block">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Aliquid, cumque culpa. Quibusdam tenetur, fugit error maiores
-                  nostrum similique cum ea, obcaecati saepe ipsa eveniet aperiam
-                  voluptatem autem eligendi commodi accusamus?
-                </span>
-              {/* </div> */}
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">Phone: 012-345-6789</li>
-                <li className="mb-4">Email: amanda@primepmconsulting.com</li>
-              </ul>
-            </Link>
+          <div className="lg:col-span-3">
+            <div className="relative w-80 h-40 mb-8">
+              <Link href={"/"} className="">
+                <Image
+                  src={Logo}
+                  className=""
+                  alt="Prime PM Consulting Logo"
+                  layout="fill"
+                />
+              </Link>
+            </div>
+            <p className="text-gray-700 text-sm">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
+              cumque culpa. Quibusdam tenetur, fugit error maiores nostrum
+              similique cum ea, obcaecati saepe ipsa eveniet aperiam voluptatem
+              autem eligendi commodi accusamus?
+            </p>
           </div>
 
-          {/* Sitemap */}
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-            <div>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                  Sitemap
-                </h2>
-                <li className="mb-4">
-                  <Link href={"/"} className="">
-                    Home
-                  </Link>
-                </li>
-                <li className="mb-4">
-                  <Link href={"/about-us"} className="">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href={"/services"} className="">
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link href={"/contact-us"} className="">
-                    Contact Us
-                  </Link>
-                </li>
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8"> */}
+            {/* Company */}
+            {/* lg:col-span-1 custom-lg:w-[60%] */}
+            {/* w-full md:w-1/2 lg:w-[70%] xl:w-[60%] 2xl:w-[50%] */}
+            <div className="lg:col-span-2 flex flex-col">
+              {/* space-y-4 */}
+              <h4 className=" font-semibold text-gray-700">Company</h4>
+              <ul className="list-none mt-6">
+                {pagesArr.map((page) => (
+                  <li
+                    key={page}
+                    className="text-gray-700 hover:text-white text-sm transition-colors duration-500 ease-in-out"
+                  >
+                    <Link
+                      // replaces any space in between words with a dash
+                      href={
+                        page === "Home"
+                          ? "/"
+                          : `/${page.toLowerCase().replace(/ /g, "-")}`
+                      }
+                      className="text-sm leading-6 text-gray-700"
+                    >
+                      {page}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
-
             {/* Business Hours */}
-            <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Business Hours:
-              </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">Mon - Fri: 8am - 5pm</li>
+            {/* lg:col-span-1 w-full md:w-1/2 lg:w-[70%] xl:w-[60%] 2xl:w-[50%] */}
+            {/* lg:col-span-1 w-full md:w-1/2 lg:w-[70%] xl:w-[60%] 2xl:w-[50%] */}
+            <div className="lg:col-span-2 flex flex-col">
+              <h4 className="font-semibold text-gray-700">Business Hours</h4>
+              <ul className="mt-6 space-y-2">
+                <li className="text-sm text-gray-700">Mon - Fri: 8am - 5pm</li>
               </ul>
             </div>
-          </div>
+            {/* Contact Us */}
+            {/* lg:col-span-1 */}
+            <div className="lg:col-span-2 flex flex-col">
+              <h4 className="font-semibold text-gray-700">Contact Us</h4>
+              <ul className="mt-6 space-y-2">
+                <li className="text-sm text-gray-700">012-345-6789</li>
+                <li className="text-sm text-gray-700">
+                  amanda@primepmconsulting.com
+                </li>
+              </ul>
+            </div>
+          {/* </div> */}
         </div>
 
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         {/* bottom portion of the footer */}
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          <span className="text-sm text-gray-700 sm:text-center ">
             © 2023{" "}
             <a href="https://flowbite.com/" className="hover:underline">
               Flowbite™
