@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import pagesArr from "@/util/pagesArr";
+import { Inter } from "next/font/google";
 // import NavLink from "../NavLink";
+
+const inter = Inter({ subsets: ["latin"] });
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -11,8 +14,6 @@ const Header = () => {
   */
   const [isAnimatingOut, setIsAnimatingOut] = useState(false);
   const router = useRouter();
-
-  const isActive = (path) => router.pathname === path;
 
   const toggleMobileMenu = () => {
     // setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -28,52 +29,54 @@ const Header = () => {
   };
 
   return (
-    <nav className="bg-white shadow relative">
-      {/* px-4 sm:px-6 */}
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <nav
+      className={`bg-white shadow relative text-base text-gray-600 ${inter.className}`}
+    >
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           {/* logo */}
-          <div className="flex items-center ">
+          <div className="flex items-center">
             <div className="flex-shrink-0">
-              <Link href={"/"} className="text-black">
+              <Link href={"/"} className="">
                 Logo
               </Link>
             </div>
           </div>
-          {/* 
-          for testing/dev purposes I use:
-          - outline: auto; on the nav tag
-          - height: 100%; on the parent tag (also added a nav-menu class to it) of the Link tag (added a test class to the Link tag)
-
-          */}
 
           {/* Nav Menu */}
           <div className="nav-menu hidden md:flex md:items-center md:space-x-4">
-            {pagesArr.map((page) => (
-              <Link
-                key={page}
-                // replaces any space in between words with a dash
-                href={
-                  page === "Home"
-                    ? "/"
-                    : `/${page.toLowerCase().replace(/ /g, "-")}`
-                }
-                // active:text-gray-900 text-sm
-                // hover:bg-gray-50 hover:text-gray-700
-                // font-medium
-                className="test text-gray-500 hover:bg-black hover:text-white rounded-lg p-2"
-              >
-                {page}
-              </Link>
-            ))}
+            {pagesArr.map((page) => {
+              const isActive =
+                router.pathname ===
+                (page === "Home"
+                  ? "/"
+                  : `/${page.toLowerCase().replace(/ /g, "-")}`);
+
+              return (
+                <Link
+                  key={page}
+                  // replaces any space in between words with a dash
+                  href={
+                    page === "Home"
+                      ? "/"
+                      : `/${page.toLowerCase().replace(/ /g, "-")}`
+                  }// handle active link state using next.js since tailwind css won't
+                  className={`m-2 mb-0 pb-1 transition-colors duration-300 ease-in-out ${
+                    isActive
+                      ? "border-b-[1px] border-gray-950"
+                      : "hover:border-b-[1px] hover:border-gray-950"
+                  }`}
+                >
+                  {page}
+                </Link>
+              );
+            })}
           </div>
 
           {/* mobile hamburger icon button */}
           <div className="md:hidden flex items-center">
             <button
-              // text-white md:text-white hover:text-white
-              // rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-400
-              className="text-gray-400 hover:text-gray-400 inline-flex items-center justify-center p-2 "
+              className="inline-flex items-center justify-center p-2 "
               onClick={toggleMobileMenu}
             >
               {/* hamburger button state for closed menu */}
@@ -100,16 +103,14 @@ const Header = () => {
       {/* Mobile Nav Menu */}
       {isMobileMenuOpen && (
         <div
-          className={`md:hidden absolute top-0 min-h-screen overflow-hidden right-0 w-full bg-gray-800 text-white transform origin-top-left ${
+          className={`md:hidden absolute top-0 min-h-screen overflow-hidden right-0 w-full bg-beige-100  transform origin-top-left ${
             isAnimatingOut ? "animate-close-menu" : "animate-open-menu"
           }`}
           aria-label="mobile"
         >
           <div className="flex justify-end h-16 px-6">
             <button
-              // text-white md:text-white hover:text-white
-              // rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-400
-              className="text-gray-400 hover:text-gray-400 inline-flex items-center justify-center p-2  "
+              className="inline-flex items-center justify-center p-2"
               onClick={toggleMobileMenu}
             >
               {/* hamburger button state for opened menu */}
@@ -130,9 +131,15 @@ const Header = () => {
               </svg>
             </button>
           </div>
-          {/* sm:px-3 space-y-1 px-2 */}
           <div className=" pt-2 pb-3 ">
-            {pages.map((page) => (
+            {pagesArr.map((page) => {
+              const isActive =
+              router.pathname ===
+              (page === "Home"
+                ? "/"
+                : `/${page.toLowerCase().replace(/ /g, "-")}`);
+
+              return (
               <Link
                 key={page}
                 href={
@@ -140,12 +147,16 @@ const Header = () => {
                     ? "/"
                     : `/${page.toLowerCase().replace(/ /g, "-")}`
                 }
-                // p-2
-                className="text-black text-base leading-6 font-medium flex items-center hover:bg-black hover:text-white py-2 sm:pl-5 sm:pr-6 mt-1"
+                className={`text-base leading-6 flex items-center py-2 px-14 text-[22px] mt-1 transition-colors duration-300 ease-in-out ${
+                    isActive
+                      ? "border-b-[1px] border-gray-950"
+                      : "hover:border-b-[1px] hover:border-gray-950"
+                  }`}
               >
                 {page}
               </Link>
-            ))}
+            )}
+            )}
           </div>
         </div>
       )}

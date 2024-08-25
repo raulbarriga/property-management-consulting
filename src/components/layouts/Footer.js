@@ -1,22 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-// import { Nunito } from "next/font/google";
-// import { Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 
 import Logo from "../../../public/images/logo.png";
 import pagesArr from "@/util/pagesArr";
 
-const Footer = () => {
-  // const nunito = Nunito({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
-  // note: footer looks good for the 3 columns (just needs to be responsive)
-  // trying the 3 columns now without the first 2 being together
+const Footer = () => {
   return (
-    // the column structure looks good from 1277px viewport width & up
-    // check the bottom padding/margin for the last footer part under the horizontal line
-    // make the rest of the columns responsive now
-    <footer className="text-gray-200 font-nunito bg-white tracking-wide">
+    <footer className={`text-gray-600 bg-white tracking-wide ${inter.className}`}>
       <div className="pt-14 pb-8 px-6 sm:px-10">
         {/* container for all columns */}
         <div

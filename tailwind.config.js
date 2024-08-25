@@ -15,10 +15,12 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       screens: {
-        'custom-footer': { 'max': '379px' }, // custom range from 379px down
+        "custom-footer": { max: "379px" }, // custom range from 379px down
       },
-      fontFamily: {
-        nunito: ['Nunito', 'sans-serif'],
+      colors: {
+        beige: {
+          100: "#F5F5DC",
+        },
       },
     },
     keyframes: {
@@ -33,8 +35,14 @@ module.exports = {
         },
       },
       "close-menu": {
-        "0%": { opacity: 1, transform: "translateX(0)" },
-        "100%": { opacity: 0, transform: "translateX(-100%)" },
+        "0%": {
+          opacity: 1,
+          transform: "translateX(0)",
+        },
+        "100%": {
+          opacity: 0,
+          transform: "translateX(-100%)",
+        },
       },
     },
     animation: {
