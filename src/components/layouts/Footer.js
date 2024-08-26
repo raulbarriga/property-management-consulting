@@ -9,8 +9,10 @@ import pagesArr from "@/util/pagesArr";
 const inter = Inter({ subsets: ["latin"] });
 
 const Footer = () => {
+  // if/when the client gives you a new logo, come back & use that here
+  // then adjust the columns & breakpoints as needed to fit the content with the new logo
   return (
-    <footer className={`text-gray-600 bg-white tracking-wide ${inter.className}`}>
+    <footer className={`text-gray-600 text-base bg-white tracking-wide ${inter.className}`}>
       <div className="pt-14 pb-8 px-6 sm:px-10">
         {/* container for all columns */}
         <div
@@ -25,12 +27,11 @@ const Footer = () => {
                   src={Logo}
                   className="w-full h-full top-0 left-0 object-cover"
                   alt="Prime PM Consulting Logo"
-                  objectFit="cover"
                   fill
                 />
               </Link>
             </div>
-            <p className="text-gray-700 text-sm max-w-[30rem] text-balance">
+            <p className="max-w-[30rem] text-balance">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
               cumque culpa. Quibusdam tenetur, fugit error maiores nostrum
               similique cum ea, obcaecati saepe ipsa eveniet aperiam voluptatem
@@ -45,12 +46,11 @@ const Footer = () => {
           >
             {/* Company */}
             <div id="company" className="md:col-span-1 lg:col-span-3 xl:col-span-1">
-              <h4 className=" font-semibold text-gray-700">Company</h4>
+              <h4 className=" font-semibold ">Company</h4>
               <ul className="list-none mt-4 space-y-2">
                 {pagesArr.map((page) => (
                   <li
                     key={page}
-                    className="text-gray-700 hover:text-white text-sm transition-colors duration-500 ease-in-out"
                   >
                     <Link
                       // replaces any space in between words with a dash
@@ -59,7 +59,7 @@ const Footer = () => {
                           ? "/"
                           : `/${page.toLowerCase().replace(/ /g, "-")}`
                       }
-                      className="text-sm leading-6 text-gray-700"
+                      className="leading-6"
                     >
                       {page}
                     </Link>
@@ -70,20 +70,20 @@ const Footer = () => {
             {/* Business Hours */}
             <div
               id="business"
-              className=" md:col-span-1 lg:col-span-4 xl:col-span-1 "
+              className="md:col-span-1 lg:col-span-4 xl:col-span-1"
             >
-              <h4 className="font-semibold text-gray-700">Business Hours</h4>
+              <h4 className="font-semibold ">Business Hours</h4>
               <ul className="mt-4 space-y-2">
-                <li className="text-sm text-gray-700">Mon - Fri: 8am - 5pm</li>
+                <li className="">Mon - Fri: 8am - 5pm</li>
               </ul>
             </div>
 
             {/* Contact Us */}
             <div id="contact" className="md:col-span-2 lg:col-span-4 xl:col-span-1 ">
-              <h4 className="font-semibold text-gray-700">Contact Us</h4>
+              <h4 className="font-semibold ">Contact Us</h4>
               <ul className="mt-4 space-y-2">
-                <li className="text-sm text-gray-700">012-345-6789</li>
-                <li className="text-sm text-gray-700">
+                <li className="">012-345-6789</li>
+                <li className="">
                   amanda@primepmconsulting.com
                 </li>
               </ul>
@@ -92,9 +92,9 @@ const Footer = () => {
         </div>
         {/* //  bottom portion of the footer */}
         <div className="border-t-[1px] border-gray-200 mt-16 pt-8 sm:mt-20 lg:mt-24">
-          <span className="text-sm text-gray-700 sm:text-center ">
+          <span className=" sm:text-center ">
             © 2023{" "}
-            <a href="https://flowbite.com/" className="hover:underline">
+            <a href="https://flowbite.com/" className="">
               Flowbite™
             </a>
             . All Rights Reserved.

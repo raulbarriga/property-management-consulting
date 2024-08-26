@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import pagesArr from "@/util/pagesArr";
-import { Inter } from "next/font/google";
-// import NavLink from "../NavLink";
+import { Inter, Bodoni_Moda } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
+const bodoniModa = Bodoni_Moda({ subsets: ["latin"] });
 
+/*
+Note: if new company logo has the name of the company in its image, remove the h3 tag with the company's name
+*/
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   /*
@@ -16,7 +19,6 @@ const Header = () => {
   const router = useRouter();
 
   const toggleMobileMenu = () => {
-    // setIsMobileMenuOpen(!isMobileMenuOpen);
     if (isMobileMenuOpen) {
       // Start the closing animation
       setIsAnimatingOut(true);
@@ -38,7 +40,7 @@ const Header = () => {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <Link href={"/"} className="">
-                Logo
+                <h3 className={`self-center text-[1.375rem] font-medium whitespace-nowrap tracking-[0.031em] ${bodoniModa.className}`}>Prime PM Consulting</h3>
               </Link>
             </div>
           </div>
@@ -60,7 +62,7 @@ const Header = () => {
                     page === "Home"
                       ? "/"
                       : `/${page.toLowerCase().replace(/ /g, "-")}`
-                  }// handle active link state using next.js since tailwind css won't
+                  } // handle active link state using next.js since tailwind css won't
                   className={`m-2 mb-0 pb-1 transition-colors duration-300 ease-in-out ${
                     isActive
                       ? "border-b-[1px] border-gray-950"
@@ -134,29 +136,29 @@ const Header = () => {
           <div className=" pt-2 pb-3 ">
             {pagesArr.map((page) => {
               const isActive =
-              router.pathname ===
-              (page === "Home"
-                ? "/"
-                : `/${page.toLowerCase().replace(/ /g, "-")}`);
+                router.pathname ===
+                (page === "Home"
+                  ? "/"
+                  : `/${page.toLowerCase().replace(/ /g, "-")}`);
 
               return (
-              <Link
-                key={page}
-                href={
-                  page === "Home"
-                    ? "/"
-                    : `/${page.toLowerCase().replace(/ /g, "-")}`
-                }
-                className={`text-base leading-6 flex items-center py-2 px-14 text-[22px] mt-1 transition-colors duration-300 ease-in-out ${
+                <Link
+                  key={page}
+                  href={
+                    page === "Home"
+                      ? "/"
+                      : `/${page.toLowerCase().replace(/ /g, "-")}`
+                  }
+                  className={`text-base leading-6 flex items-center py-2 px-14 text-[22px] mt-1 `}
+                >
+                  <span className={`transition-colors duration-300 ease-in-out ${
                     isActive
-                      ? "border-b-[1px] border-gray-950"
-                      : "hover:border-b-[1px] hover:border-gray-950"
-                  }`}
-              >
-                {page}
-              </Link>
-            )}
-            )}
+                      ? "pb-2 border-b-[1px] border-gray-950"
+                      : "pb-2 hover:border-b-[1px] hover:border-gray-950"
+                  }`}>{page}</span>
+                </Link>
+              );
+            })}
           </div>
         </div>
       )}
