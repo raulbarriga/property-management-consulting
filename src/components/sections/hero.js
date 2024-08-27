@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 
 const hero = () => {
+    // I also like this hero example: https://tailwindui.com/components/marketing/sections/heroes
   return (
     <section>
         <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 h-screen text-white overflow-hidden">
