@@ -15,17 +15,19 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       screens: {
-        "custom-footer": { max: "379px" }, // custom range from 379px down
         "custom-about-xl": { max: "1199px" },
         "custom-about-lg": { max: "991px" },
         "custom-about-md": { max: "767px" },
         "custom-about-sm": { max: "575px" },
+        "min-375px": "375px",
+        "custom-footer": { max: "379px" }, // custom range from 379px down
       },
       colors: {
         beige: {
           100: "#a29889",
         },
         "forest-green": "#2E4A32",
+        "body-color": "#637381", // for paragraph text
       },
       width: {
         "custom-about-calc": "calc(((100% - 1140px) / 2) + 866px)",
@@ -59,6 +61,9 @@ module.exports = {
       animation: {
         "open-menu": "open-menu 0.5s ease-in-out forwards",
         "close-menu": "close-menu 0.5s ease-in-out forwards",
+      },
+      boxShadow: {
+        "faded-all": "inset 0 0 40px 16px #fff", // from https://codepen.io/burtclan/pen/PoOOey?editors=0100
       },
     },
     plugins: [require("tailwindcss-animated")],

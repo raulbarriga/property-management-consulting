@@ -8,11 +8,12 @@ const playfairDisplay = Playfair_Display({ subsets: ["latin"] });
 const openSans = Open_Sans({ subsets: ["latin"] });
 
 const aboutUs = () => {
+  // from: https://tailgrids.com/components/about
   return (
     // bg-white bg-beige-100/70 pt-20 pt-10
-    <section className="overflow-hidden px-5 pt-0 pb-12 lg:pb-[90px] bg-white">
+    <section id="about-us" className="overflow-hidden px-5 pt-0 pb-12 lg:pb-[90px] text-body-color bg-white">
       <h2
-        className={`custom-about-lg:text-6xl custom-about-lg:mb-5 ${playfairDisplay.className} text-[5rem] font-normal text-center pt-20 lg:pt-[120px] pb-12 lg:pb-[90px]`}
+        className={`text-black custom-about-lg:text-6xl custom-about-lg:mb-5 ${playfairDisplay.className} text-[5rem] font-normal text-center pt-20 lg:pt-[120px] pb-12 lg:pb-[90px]`}
         // pb-10
       >
         About Us
@@ -25,16 +26,15 @@ const aboutUs = () => {
             id="outside-image-parent"
             className="w-full px-4 lg:w-5/12 max-w-[514px] max-h-[537px] mx-auto"
           >
-            <div className="relative w-full h-full">
+            <div className="relative w-full after:content-[''] after:absolute after:block after:top-0 after:left-0 after:w-full after:h-full after:shadow-faded-all">
               <Image
                 src={Headshot}
                 alt="CEO image"
-                // fill rounded-2xl
-                className="w-full rounded-2xl drop-shadow-2xl"
+                // fill drop-shadow-2xl
+                className="w-full rounded-lg"
               />
             </div>
           </div>
-
           {/* right side */}
           <div className="w-full px-4 lg:w-1/2 xl:w-5/12 mx-auto">
             <div className="mt-10 lg:mt-0">
@@ -51,7 +51,7 @@ const aboutUs = () => {
               </h2>
               {/* mb-5 text-base text-gray-600 */}
               <p
-                className={`${openSans.className} text-lg text-gray-600 text-pretty`}
+                className={`${openSans.className} text-lg  text-pretty`}
               >
                 <span className="font-bold text-pretty">
                   Prime PM Consulting
@@ -69,7 +69,7 @@ const aboutUs = () => {
               </p>
               {/* "mb-8 text-base text-gray-600" */}
               <p
-                className={`${openSans.className} text-lg  text-gray-600 py-5 text-pretty`}
+                className={`${openSans.className} text-lg   py-5 text-pretty`}
               >
                 <span className="font-bold">Contact us today</span> to learn
                 more about taking the next steps and refining your property
@@ -77,7 +77,7 @@ const aboutUs = () => {
               </p>
               <Link
                 href="/#contact-us"
-                className="inline-flex items-center justify-center py-3 text-base font-medium text-center text-white border border-transparent rounded-md px-7 bg-forest-green hover:bg-opacity-90"
+                className={`${openSans.className} inline-flex items-center justify-center text-base font-medium text-center text-white border border-transparent rounded-md py-3 px-7 bg-forest-green hover:bg-opacity-90`}
               >
                 Get Started
               </Link>
