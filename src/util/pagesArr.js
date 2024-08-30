@@ -1,3 +1,3 @@
-const pagesArr = ["Home", "About Us", "Services", "Contact Us"];
+const pagesArr = ["Home", "Services", "About Us", "Contact Us"];
 
 export default pagesArr;

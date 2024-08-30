@@ -33,7 +33,8 @@ const Header = () => {
   return (
     <header>
       <nav
-        className={`bg-white shadow relative text-base text-gray-600 ${inter.className}`}
+        // text-gray-600
+        className={`bg-beige-100 shadow relative text-base text-slate-700 ${inter.className}`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="relative flex items-center justify-between h-16">
@@ -57,7 +58,7 @@ const Header = () => {
                   router.pathname ===
                   (page === "Home"
                     ? "/"
-                    : `/${page.toLowerCase().replace(/ /g, "-")}`);
+                    : `/#${page.toLowerCase().replace(/ /g, "-")}`);
 
                 return (
                   <Link
@@ -66,7 +67,7 @@ const Header = () => {
                     href={
                       page === "Home"
                         ? "/"
-                        : `/${page.toLowerCase().replace(/ /g, "-")}`
+                        : `/#${page.toLowerCase().replace(/ /g, "-")}`
                     } // handle active link state using next.js since tailwind css won't
                     className={`m-2 mb-0 pb-1 transition-colors duration-300 ease-in-out ${
                       isActive
@@ -144,7 +145,7 @@ const Header = () => {
                   router.pathname ===
                   (page === "Home"
                     ? "/"
-                    : `/${page.toLowerCase().replace(/ /g, "-")}`);
+                    : `/#${page.toLowerCase().replace(/ /g, "-")}`);
 
                 return (
                   <Link
@@ -152,7 +153,7 @@ const Header = () => {
                     href={
                       page === "Home"
                         ? "/"
-                        : `/${page.toLowerCase().replace(/ /g, "-")}`
+                        : `/#${page.toLowerCase().replace(/ /g, "-")}`
                     }
                     className={`text-base leading-6 flex items-center py-2 px-14 text-[22px] mt-1 `}
                   >

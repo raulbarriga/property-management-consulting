@@ -16,39 +16,51 @@ module.exports = {
       },
       screens: {
         "custom-footer": { max: "379px" }, // custom range from 379px down
+        "custom-about-xl": { max: "1199px" },
+        "custom-about-lg": { max: "991px" },
+        "custom-about-md": { max: "767px" },
+        "custom-about-sm": { max: "575px" },
       },
       colors: {
         beige: {
-          100: "#F5F5DC",
+          100: "#a29889",
+        },
+        "forest-green": "#2E4A32",
+      },
+      width: {
+        "custom-about-calc": "calc(((100% - 1140px) / 2) + 866px)",
+        "custom-about-calc-sm": "calc(((100% - 340px) / 2) + 340px)",
+        "custom-about-calc-md": "calc(((100% - 540px) / 2) + 540px)",
+        "custom-about-calc-lg": "calc(((100% - 720px) / 2) + 584px)",
+        "custom-about-calc-xl": "calc(((100% - 940px) / 2) + 671px)",
+      },
+      keyframes: {
+        "open-menu": {
+          "0%": {
+            opacity: 0,
+            transform: "translateX(-100%)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translateX(0)",
+          },
+        },
+        "close-menu": {
+          "0%": {
+            opacity: 1,
+            transform: "translateX(0)",
+          },
+          "100%": {
+            opacity: 0,
+            transform: "translateX(-100%)",
+          },
         },
       },
-    },
-    keyframes: {
-      "open-menu": {
-        "0%": {
-          opacity: 0,
-          transform: "translateX(-100%)",
-        },
-        "100%": {
-          opacity: 1,
-          transform: "translateX(0)",
-        },
-      },
-      "close-menu": {
-        "0%": {
-          opacity: 1,
-          transform: "translateX(0)",
-        },
-        "100%": {
-          opacity: 0,
-          transform: "translateX(-100%)",
-        },
+      animation: {
+        "open-menu": "open-menu 0.5s ease-in-out forwards",
+        "close-menu": "close-menu 0.5s ease-in-out forwards",
       },
     },
-    animation: {
-      "open-menu": "open-menu 0.5s ease-in-out forwards",
-      "close-menu": "close-menu 0.5s ease-in-out forwards",
-    },
+    plugins: [require("tailwindcss-animated")],
   },
-  plugins: [require("tailwindcss-animated")],
 };

@@ -12,7 +12,9 @@ const Footer = () => {
   // if/when the client gives you a new logo, come back & use that here
   // then adjust the columns & breakpoints as needed to fit the content with the new logo
   return (
-    <footer className={`text-gray-600 text-base bg-white tracking-wide ${inter.className}`}>
+    <footer
+      className={`text-slate-700 text-base bg-white tracking-wide ${inter.className}`}
+    >
       <div className="pt-14 pb-8 px-6 sm:px-10">
         {/* container for all columns */}
         <div
@@ -45,19 +47,20 @@ const Footer = () => {
             className="grid custom-footer:con-span-1 custom-footer:grid-cols-1 col-span-2 grid-cols-2 md:col-span-2 md:grid-cols-2 lg:col-span-4 gap-8 lg:grid-cols-12 xl:grid-cols-3 xl:mt-0"
           >
             {/* Company */}
-            <div id="company" className="md:col-span-1 lg:col-span-3 xl:col-span-1">
+            <div
+              id="company"
+              className="md:col-span-1 lg:col-span-3 xl:col-span-1"
+            >
               <h4 className=" font-semibold ">Company</h4>
               <ul className="list-none mt-4 space-y-2">
                 {pagesArr.map((page) => (
-                  <li
-                    key={page}
-                  >
+                  <li key={page}>
                     <Link
                       // replaces any space in between words with a dash
                       href={
                         page === "Home"
                           ? "/"
-                          : `/${page.toLowerCase().replace(/ /g, "-")}`
+                          : `/#${page.toLowerCase().replace(/ /g, "-")}`
                       }
                       className="leading-6"
                     >
@@ -79,12 +82,17 @@ const Footer = () => {
             </div>
 
             {/* Contact Us */}
-            <div id="contact" className="md:col-span-2 lg:col-span-4 xl:col-span-1 ">
+            <div
+              id="contact"
+              className="md:col-span-2 lg:col-span-4 xl:col-span-1 "
+            >
               <h4 className="font-semibold ">Contact Us</h4>
               <ul className="mt-4 space-y-2">
                 <li className="">012-345-6789</li>
                 <li className="">
-                  amanda@primepmconsulting.com
+                  <Link href={"mailto:amanda@primepmconsulting.com"}>
+                    amanda@primepmconsulting.com
+                  </Link>
                 </li>
               </ul>
             </div>
