@@ -9,8 +9,14 @@ const openSans = Open_Sans({ subsets: ["latin"] });
 
 const aboutUs = () => {
   return (
-    // bg-white bg-beige-100/70
-    <section className="overflow-hidden px-5 pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] bg-white">
+    // bg-white bg-beige-100/70 pt-20 pt-10
+    <section className="overflow-hidden px-5 pt-0 pb-12 lg:pb-[90px] bg-white">
+      <h2
+        className={`custom-about-lg:text-6xl custom-about-lg:mb-5 ${playfairDisplay.className} text-[5rem] font-normal text-center pt-20 lg:pt-[120px] pb-12 lg:pb-[90px]`}
+        // pb-10
+      >
+        About Us
+      </h2>
       <div className="container mx-auto">
         <div className="flex flex-wrap justify-between -mx-4">
           {/* left side */}
@@ -28,31 +34,7 @@ const aboutUs = () => {
               />
             </div>
           </div>
-          {/* 
-At a viewport of 1280×720 the image was displayed 604 pixels wide, but the closest provided image has a width of 1024 which is 41% (0.71 megapixels) off. The affected viewports are 300×169–3000×4000.
 
-Try using the following image sizes in <img srcset="…"> instead:
-624×651, 768×802, 1024×1069, 1248×1303, 1400×1462, 1536×1604
-
-Loading a large image and display it much smaller should be avoided to save bandwidth. Loading a small image and display it much larger should be avoided to prevent pixelated artifacts.
-
-<img
-	alt="CEO image"
-	loading="lazy"
-	width="1024"
-	height="1069"
-	decoding="async"
-	data-nimg="1"
-	class="w-full "
-	style="color:transparent"
-	srcset="
-		/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fheadshot.f4d03f98.jpeg&w=1080&q=75 1x,
-		/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fheadshot.f4d03f98.jpeg&w=2048&q=75 2x
-	"
-	src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fheadshot.f4d03f98.jpeg&w=2048&q=75"
->
-
-*/}
           {/* right side */}
           <div className="w-full px-4 lg:w-1/2 xl:w-5/12 mx-auto">
             <div className="mt-10 lg:mt-0">
@@ -60,10 +42,12 @@ Loading a large image and display it much smaller should be avoided to save band
                 Why Choose Us
               </span> */}
               {/* mb-5 text-3xl font-bold text-black sm:text-[40px]/[48px] */}
-              <h2
-                className={`custom-about-sm:text-5xl custom-about-lg:text-6xl custom-about-lg:mb-5 ${playfairDisplay.className} text-[5rem] font-normal`}
-              >
-                About Us
+              <span className="block mb-4 text-xl font-bold text-forest-green">
+                Why Choose Us
+              </span>
+              <h2 className="mb-5 text-3xl font-bold text-black sm:text-[40px]/[48px]">
+                Partner with the Property Management Experts
+                {/* Optimize Operations and Boost Profits with Tailored Solutions */}
               </h2>
               {/* mb-5 text-base text-gray-600 */}
               <p
@@ -92,9 +76,8 @@ Loading a large image and display it much smaller should be avoided to save band
                 management business.
               </p>
               <Link
-                href="/contact-us"
+                href="/#contact-us"
                 className="inline-flex items-center justify-center py-3 text-base font-medium text-center text-white border border-transparent rounded-md px-7 bg-forest-green hover:bg-opacity-90"
-                //
               >
                 Get Started
               </Link>
