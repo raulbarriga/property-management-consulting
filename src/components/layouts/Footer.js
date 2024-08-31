@@ -3,7 +3,6 @@ import Link from "next/link";
 import React from "react";
 import { Inter } from "next/font/google";
 
-import Logo from "../../../public/images/logo.png";
 import pagesArr from "@/util/pagesArr";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -26,7 +25,7 @@ const Footer = () => {
             <div className="relative lg:w-full max-w-80 h-40 mb-4">
               <Link href={"/"} className="">
                 <Image
-                  src={Logo}
+                  src="/images/logo.png"
                   className="w-full h-full top-0 left-0 object-cover"
                   alt="Prime PM Consulting Logo"
                   fill

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { Playfair_Display, Open_Sans } from "next/font/google";
-import AboutForm from "./aboutForm";
+import ContactForm from "./ContactForm";
 
 const playfairDisplay = Playfair_Display({ subsets: ["latin"] });
 const openSans = Open_Sans({ subsets: ["latin"] });
@@ -144,7 +144,7 @@ const contactUs = () => {
           {/* right side */}
           <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
             <div className="relative rounded-lg bg-white p-8 shadow-2xl sm:p-12">
-              <AboutForm />
+              <ContactForm />
             </div>
           </div>
         </div>
@@ -154,58 +154,3 @@ const contactUs = () => {
 };
 
 export default contactUs;
-
-const ContactTextArea = ({ row, placeholder, name, defaultValue }) => {
-  return (
-    <>
-      <div className="mb-6">
-        <textarea
-          rows={row}
-          placeholder={placeholder}
-          name={name}
-          className="w-full resize-none rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-forest-green"
-          defaultValue={defaultValue}
-        />
-      </div>
-    </>
-  );
-};
-
-const ContactInputBox = ({ type, placeholder, name, Icon }) => {
-  return (
-    <>
-      <label
-        for={name}
-        className="mb-[10px] block text-base font-medium text-dark dark:text-white"
-      >
-        Name
-      </label>
-      <div className="relative">
-        <input
-          id={name}
-          type={type}
-          placeholder={placeholder}
-          name={name}
-          className="w-full bg-transparent rounded-md border border-stroke dark:border-dark-3 py-[10px] pr-3 pl-12 text-dark-6 outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-gray-2"
-        />
-        <span className="absolute top-1/2 left-4 -translate-y-1/2">
-          <svg
-            width={20}
-            height={20}
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M3.72 12.886a4.167 4.167 0 0 1 2.947-1.22h6.666a4.167 4.167 0 0 1 4.167 4.167v1.666a.833.833 0 1 1-1.667 0v-1.666a2.5 2.5 0 0 0-2.5-2.5H6.667a2.5 2.5 0 0 0-2.5 2.5v1.666a.833.833 0 1 1-1.667 0v-1.666a4.17 4.17 0 0 1 1.22-2.947ZM10 3.333a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm-4.166 2.5a4.167 4.167 0 1 1 8.333 0 4.167 4.167 0 0 1-8.333 0Z"
-              opacity={0.8}
-              fillRule="evenodd"
-              clipRule="evenodd"
-              fill="#9CA3AF"
-            />
-          </svg>
-        </span>
-      </div>
-    </>
-  );
-};

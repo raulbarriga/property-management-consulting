@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import { Playfair_Display, Open_Sans } from "next/font/google";
-import Headshot from "../../../public/images/headshot.jpeg";
 import Link from "next/link";
 
 const playfairDisplay = Playfair_Display({ subsets: ["latin"] });
@@ -28,7 +27,7 @@ const aboutUs = () => {
           >
             <div className="relative w-full after:content-[''] after:absolute after:block after:top-0 after:left-0 after:w-full after:h-full after:shadow-faded-all">
               <Image
-                src={Headshot}
+                src="/images/headshot.jpg"
                 alt="CEO image"
                 // fill drop-shadow-2xl
                 className="w-full rounded-lg"
