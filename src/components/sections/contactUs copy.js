@@ -1,20 +1,17 @@
 import Link from "next/link";
 import React from "react";
 import { Playfair_Display, Open_Sans } from "next/font/google";
-import AboutForm from "./aboutForm";
 
 const playfairDisplay = Playfair_Display({ subsets: ["latin"] });
 const openSans = Open_Sans({ subsets: ["latin"] });
+
 
 // finished the contact us section styling & responsiveness.
 // need to make the form functional now with next.js
 const contactUs = () => {
   //  from: https://tailgrids.com/components/contacts
   return (
-    <section
-      id="contact-us"
-      className="relative z-10 overflow-hidden bg-white pb-20 lg:pb-[120px]"
-    >
+    <section id="contact-us" className="relative z-10 overflow-hidden bg-white pb-20 lg:pb-[120px]">
       <h2
         //
         className={`text-black custom-about-lg:text-6xl custom-about-lg:mb-5 ${playfairDisplay.className} text-[5rem] font-normal text-center pt-20 lg:pt-[120px] pb-12 lg:pb-[90px]`}
@@ -24,7 +21,6 @@ const contactUs = () => {
       </h2>
       <div className="container px-4 mx-auto">
         <div className="-mx-4 flex flex-wrap lg:justify-between">
-          {/* left side */}
           <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
             <div className="mb-12 max-w-[570px] lg:mb-0">
               {/* <span className="mb-4 block text-base font-semibold text-forest-green">
@@ -111,7 +107,7 @@ const contactUs = () => {
                   </p>
                 </div>
               </div>
-              {/* email */}
+                {/* email */}
               <div className="mb-8 flex w-full max-w-[370px]">
                 <div className="mr-6 hidden min-375px:flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-forest-green/5 text-forest-green sm:h-[70px] sm:max-w-[70px]">
                   <svg
@@ -141,10 +137,40 @@ const contactUs = () => {
               </div>
             </div>
           </div>
-          {/* right side */}
           <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
             <div className="relative rounded-lg bg-white p-8 shadow-2xl sm:p-12">
-              <AboutForm />
+              <form>
+                <ContactInputBox
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                />
+                <ContactInputBox
+                  type="text"
+                  name="email"
+                  placeholder="Your Email"
+                />
+                <ContactInputBox
+                  type="text"
+                  name="phone"
+                  placeholder="Your Phone"
+                />
+                <ContactTextArea
+                  row="6"
+                  placeholder="Your Message"
+                  name="details"
+                  defaultValue=""
+                />
+                <div>
+                  <button
+                    type="submit"
+                    // p-3 removed w-full to keep button small & not too wide
+                    className={`${openSans.className} rounded-md border border-forest-green bg-forest-green py-3 px-7 text-white transition hover:bg-opacity-90`}
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -154,7 +180,7 @@ const contactUs = () => {
 };
 
 export default contactUs;
-
+// left off fixing things in this file to better resemble the original
 const ContactTextArea = ({ row, placeholder, name, defaultValue }) => {
   return (
     <>
@@ -171,40 +197,16 @@ const ContactTextArea = ({ row, placeholder, name, defaultValue }) => {
   );
 };
 
-const ContactInputBox = ({ type, placeholder, name, Icon }) => {
+const ContactInputBox = ({ type, placeholder, name }) => {
   return (
     <>
-      <label
-        for={name}
-        className="mb-[10px] block text-base font-medium text-dark dark:text-white"
-      >
-        Name
-      </label>
-      <div className="relative">
+      <div className="mb-6">
         <input
-          id={name}
           type={type}
           placeholder={placeholder}
           name={name}
-          className="w-full bg-transparent rounded-md border border-stroke dark:border-dark-3 py-[10px] pr-3 pl-12 text-dark-6 outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-gray-2"
+          className="w-full rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-primary"
         />
-        <span className="absolute top-1/2 left-4 -translate-y-1/2">
-          <svg
-            width={20}
-            height={20}
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M3.72 12.886a4.167 4.167 0 0 1 2.947-1.22h6.666a4.167 4.167 0 0 1 4.167 4.167v1.666a.833.833 0 1 1-1.667 0v-1.666a2.5 2.5 0 0 0-2.5-2.5H6.667a2.5 2.5 0 0 0-2.5 2.5v1.666a.833.833 0 1 1-1.667 0v-1.666a4.17 4.17 0 0 1 1.22-2.947ZM10 3.333a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm-4.166 2.5a4.167 4.167 0 1 1 8.333 0 4.167 4.167 0 0 1-8.333 0Z"
-              opacity={0.8}
-              fillRule="evenodd"
-              clipRule="evenodd"
-              fill="#9CA3AF"
-            />
-          </svg>
-        </span>
       </div>
     </>
   );
