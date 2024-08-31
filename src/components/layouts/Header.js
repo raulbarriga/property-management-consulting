@@ -1,6 +1,8 @@
+"use client";
+
 import React, { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import pagesArr from "@/util/pagesArr";
 import { Inter, Bodoni_Moda } from "next/font/google";
 

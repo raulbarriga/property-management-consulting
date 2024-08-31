@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { Playfair_Display, Open_Sans } from "next/font/google";
 import Link from "next/link";
+import Headshot from "../../../public/images/headshot.jpeg";
 
 const playfairDisplay = Playfair_Display({ subsets: ["latin"] });
 const openSans = Open_Sans({ subsets: ["latin"] });
@@ -10,7 +11,10 @@ const aboutUs = () => {
   // from: https://tailgrids.com/components/about
   return (
     // bg-white bg-beige-100/70 pt-20 pt-10
-    <section id="about-us" className="overflow-hidden px-5 pt-0 pb-12 lg:pb-[90px] text-body-color bg-white">
+    <section
+      id="about-us"
+      className="overflow-hidden px-5 pt-0 pb-12 lg:pb-[90px] text-body-color bg-white"
+    >
       <h2
         className={`text-black custom-about-lg:text-6xl custom-about-lg:mb-5 ${playfairDisplay.className} text-[5rem] font-normal text-center pt-20 lg:pt-[120px] pb-12 lg:pb-[90px]`}
         // pb-10
@@ -27,8 +31,10 @@ const aboutUs = () => {
           >
             <div className="relative w-full after:content-[''] after:absolute after:block after:top-0 after:left-0 after:w-full after:h-full after:shadow-faded-all">
               <Image
-                src="/images/headshot.jpg"
+                src={Headshot}
                 alt="CEO image"
+                width={1024}
+                height={1069}
                 // fill drop-shadow-2xl
                 className="w-full rounded-lg"
               />
@@ -49,9 +55,7 @@ const aboutUs = () => {
                 {/* Optimize Operations and Boost Profits with Tailored Solutions */}
               </h2>
               {/* mb-5 text-base text-gray-600 */}
-              <p
-                className={`${openSans.className} text-lg  text-pretty`}
-              >
+              <p className={`${openSans.className} text-lg  text-pretty`}>
                 <span className="font-bold text-pretty">
                   Prime PM Consulting
                 </span>{" "}
@@ -67,9 +71,7 @@ const aboutUs = () => {
                 enhance efficiency, and drive success.
               </p>
               {/* "mb-8 text-base text-gray-600" */}
-              <p
-                className={`${openSans.className} text-lg   py-5 text-pretty`}
-              >
+              <p className={`${openSans.className} text-lg   py-5 text-pretty`}>
                 <span className="font-bold">Contact us today</span> to learn
                 more about taking the next steps and refining your property
                 management business.

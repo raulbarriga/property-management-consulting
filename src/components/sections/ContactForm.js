@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Open_Sans } from "next/font/google";
+import { useForm } from "react-hook-form";
 import ContactInputBox from "./Form/ContactInputBox";
 import ContactTextArea from "./Form/ContactTextArea";
 
@@ -16,6 +17,13 @@ const ContactForm = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+
   const validateEmail = (email) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
@@ -29,7 +37,7 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
 
     if (!validateEmail(formData.email)) {
@@ -69,7 +77,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <ContactInputBox
           type="text"
           name="name"
@@ -113,7 +121,7 @@ const ContactForm = () => {
             {isSubmitting ? "Sending..." : "Send Message"}
           </button>
         </div>
-        {submissionStatus && <p>{submissionStatus}</p>}
+        {/* {submissionStatus && <p>{submissionStatus}</p>} */}
       </form>
     </>
   );
