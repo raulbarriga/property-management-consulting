@@ -1,10 +1,10 @@
-import Link from "next/link";
 import React from "react";
 
 const services = () => {
   return (
     <section id="services" className="bg-white">
       {/* for top spacing (from aboutUs): pt-20 lg:pt-[120px] pb-12 lg:pb-[90px] */}
+      {/* add h2 services main headline here */}
       {/* 1st part/row */}
       <div
         id="outer-wrapper-1"
@@ -27,8 +27,10 @@ const services = () => {
           id="card-wrapper"
           className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
         >
+          {/* test */}
           {/* card 1 */}
-          <div className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
+          {/* border border-gray-800 hover:border-pink-500/10 */}
+           <div className="rounded-xl p-8 shadow-xl transition hover:shadow-forest-green/10">
             <h2 className="mt-4 text-xl font-bold">
               Monthly Accounting Cycles
             </h2>
@@ -38,7 +40,7 @@ const services = () => {
             </p>
           </div>
 
-          <div className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
+           <div className=" rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
             <h2 className="mt-4 text-xl font-bold">Bank Reconciliations</h2>
 
             <p className="mt-1 text-sm  ">
@@ -46,7 +48,7 @@ const services = () => {
             </p>
           </div>
 
-          <div className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
+           <div className=" rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
             <h2 className="mt-4 text-xl font-bold">Business Optimization</h2>
 
             <p className="mt-1 text-sm  ">
@@ -77,7 +79,7 @@ const services = () => {
           className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
         >
           {/* card 1 */}
-          <div className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
+           <div className=" rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
             <h2 className="mt-4 text-xl font-bold">
               Accounts Payable Management
             </h2>
@@ -87,7 +89,7 @@ const services = () => {
             </p>
           </div>
           {/* card 2 */}
-          <div className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
+           <div className=" rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
             <h2 className="mt-4 text-xl font-bold">Full-Cycle Accounting</h2>
 
             <p className="mt-1 text-sm  ">
@@ -96,7 +98,7 @@ const services = () => {
             </p>
           </div>
           {/* card 3 */}
-          <div className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
+           <div className=" rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
             <h2 className="mt-4 text-xl font-bold">
               Precise Financial Reporting
             </h2>
@@ -106,7 +108,7 @@ const services = () => {
             </p>
           </div>
           {/* card 4 */}
-          <div className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
+           <div className=" rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
             <h2 className="mt-4 text-xl font-bold">
               Thorough Bank Reconciliations
             </h2>
@@ -116,7 +118,7 @@ const services = () => {
             </p>
           </div>
           {/* card 5 */}
-          <div className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
+           <div className=" rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
             <h2 className="mt-4 text-xl font-bold">
               Enhanced Financial Management
             </h2>
@@ -126,7 +128,7 @@ const services = () => {
             </p>
           </div>
           {/* card 6 */}
-          <div className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
+           <div className=" rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
             <h2 className="mt-4 text-xl font-bold">1099 Preparation</h2>
 
             <p className="mt-1 text-sm  ">
@@ -157,7 +159,7 @@ const services = () => {
           className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
         >
           {/* card 1 */}
-          <div className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
+           <div className=" rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
             <h2 className="mt-4 text-xl font-bold">Review Current Workflows</h2>
 
             <p className="mt-1 text-sm  ">
@@ -166,7 +168,7 @@ const services = () => {
             </p>
           </div>
 
-          <div className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
+           <div className=" rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
             <h2 className="mt-4 text-xl font-bold">
               Identify Optimization Opportunities
             </h2>
@@ -177,7 +179,7 @@ const services = () => {
             </p>
           </div>
           {/* card 3 */}
-          <div className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
+           <div className=" rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
             <h2 className="mt-4 text-xl font-bold">
               Leverage Integrations and Data Automation
             </h2>
@@ -188,7 +190,7 @@ const services = () => {
             </p>
           </div>
           {/* card 4 */}
-          <div className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
+           <div className=" rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10">
             <h2 className="mt-4 text-xl font-bold">
               Ongoing Training and Support
             </h2>
