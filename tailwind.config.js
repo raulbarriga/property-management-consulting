@@ -19,7 +19,9 @@ module.exports = {
         "custom-about-lg": { max: "991px" },
         "custom-about-md": { max: "767px" },
         "custom-about-sm": { max: "575px" },
-        "min-375px": "375px",
+        "min-375px": "375px", // for contactUs , max: "639px"
+        "custom-headers": { min: "450px" }, // for headers
+        "custom-headers-xs": { min: "360px", max: "449px" }, // for headers
         "custom-footer": { max: "379px" }, // custom range from 379px down
       },
       colors: {

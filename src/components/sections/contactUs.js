@@ -16,8 +16,7 @@ const contactUs = () => {
       className="relative z-10 overflow-hidden bg-white pb-20 lg:pb-[120px]"
     >
       <h2
-        //
-        className={`text-black custom-about-lg:text-6xl custom-about-lg:mb-5 ${playfairDisplay.className} text-[5rem] font-normal text-center pt-20 lg:pt-[120px] pb-12 lg:pb-[90px]`}
+        className={`text-black custom-about-lg:mb-5 ${playfairDisplay.className} text-6xl custom-headers-xs:text-[4.5rem] custom-headers:text-[5rem] font-normal text-center pt-20 lg:pt-[120px] pb-12 lg:pb-[90px]`}
         // pb-10
       >
         Contact Us
@@ -30,7 +29,7 @@ const contactUs = () => {
               {/* <span className="mb-4 block text-base font-semibold text-forest-green">
                 Contact Us
               </span> */}
-              <h2 className="mb-6 text-[32px] font-bold text-black sm:text-[40px] lg:text-[36px] xl:text-[40px]">
+              <h2 className="mb-6 text-[32px] font-bold text-black sm:text-[40px] lg:text-[36px] xl:text-[40px] text-pretty">
                 Get In Touch With Us
               </h2>
               <p
