@@ -7,33 +7,86 @@ const playfairDisplay = Playfair_Display({ subsets: ["latin"] });
 const openSans = Open_Sans({ subsets: ["latin"] });
 
 const hero = () => {
-  // I also like this hero example: https://tailwindui.com/components/marketing/sections/heroes
   return (
-    <section id="hero">
-      <div className="relative bg-gradient-to-r from-black to-white h-screen text-white overflow-hidden">
-        <div className="absolute inset-0">
+    <section
+      id="hero"
+      className="relative h-[calc(100vh-64px)] flex items-center justify-center"
+    >
+      {/* background image */}
+      <div className="absolute inset-0 w-full h-full">
+        <Image
+          src="https://images.unsplash.com/photo-1522252234503-e356532cafd5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw2fHxjb2RlfGVufDB8MHx8fDE2OTQwOTg0MTZ8MA&ixlib=rb-4.0.3&q=80&w=1080"
+          alt="Background Image"
+          fill
+          priority
+          // object-center
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-beige-100 via-beige-100/70 via-60% to-transparent"></div>
+      </div>
+      {/* hero text */}
+      <div className="absolute inset-0 text-white z-10 flex flex-col justify-center items-start h-full text-center">
+        <h1
+          className={`text-5xl ${playfairDisplay.className} font-bold leading-tight mb-4 pl-12 text-left max-w-4xl`}
+        >
+          Unlock Your Property Management Potential with Expert Appfolio
+          Solutions
+        </h1>
+        <p
+        // text-gray-300
+          className={`${openSans.className} text-lg mb-8 pl-12 text-left max-w-4xl`}
+        >
+          With over 20 years of combined experience, Prime PM Consulting offers
+          specialized support and consulting to enhance your property management
+          efficiency and profitability. From accounting and bookkeeping to
+          operations and workflow optimization, our dedicated team of experts is
+          here to help you succeed.
+        </p>
+        <Link
+          href="#contact-us"
+          className={`${openSans.className} ml-12 text-base font-medium border border-transparent rounded-md py-3 px-7 bg-forest-green hover:bg-opacity-90`}
+        >
+          Get Started Today
+        </Link>
+      </div>
+    </section>
+  );
+};
+
+export default hero;
+
+/*
+<section id="hero">
+      <div className="relative bg-gradient-to-r from-black to-white h-[calc(100vh-64px)] text-white overflow-hidden">
+        <div className="absolute">
           <Image
             src="https://images.unsplash.com/photo-1522252234503-e356532cafd5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw2fHxjb2RlfGVufDB8MHx8fDE2OTQwOTg0MTZ8MA&ixlib=rb-4.0.3&q=80&w=1080"
             alt="Background Image"
             fill
             className="object-cover object-center w-full h-full"
           />
-          <div className="absolute inset-0 bg-black opacity-50 bg-gradient-to-r from-black to-white"></div>
-        </div>
+          // /* bg-black opacity-50 bg-gradient-to-r from-black to-white inset-0 */
+// <div className="absolute bg-white bg-gradient-to-b from-blue-50 to-transparent"></div>
+//</div>
 
-        <div className="relative z-10 flex flex-col justify-center items-start h-full text-center">
-          <h1 className={`text-5xl ${playfairDisplay.className} font-bold leading-tight mb-4 pl-12 text-left max-w-4xl`}>
-            Unlock Your Property Management Potential with Expert Appfolio
-            Solutions
-          </h1>
-          <p className={`${openSans.className} text-lg text-gray-300 mb-8 pl-12 text-left max-w-4xl`}>
-            With over 20 years of combined experience, Prime PM Consulting
-            offers specialized support and consulting to enhance your property
-            management efficiency and profitability. From accounting and
-            bookkeeping to operations and workflow optimization, our dedicated
-            team of experts is here to help you succeed.
-          </p>
-          <Link
+// /* text */
+// <div className="relative z-10 flex flex-col justify-center items-start h-full text-center">
+//   <h1
+// className={`text-5xl ${playfairDisplay.className} font-bold leading-tight mb-4 pl-12 text-left max-w-4xl`}
+//   >
+//     Unlock Your Property Management Potential with Expert Appfolio
+//     Solutions
+//   </h1>
+// <p
+//   className={`${openSans.className} text-lg text-gray-300 mb-8 pl-12 text-left max-w-4xl`}
+// >
+//   With over 20 years of combined experience, Prime PM Consulting
+//   offers specialized support and consulting to enhance your property
+//   management efficiency and profitability. From accounting and
+//   bookkeeping to operations and workflow optimization, our dedicated
+//   team of experts is here to help you succeed.
+// </p>
+/* <Link
             href="#contact-us"
             // transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg hover:bg-yellow-300
             // "bg-yellow-400 text-gray-900  py-2 px-6 rounded-full text-lg font-semibold "
@@ -44,8 +97,63 @@ const hero = () => {
           </Link>
         </div>
       </div>
-    </section>
-  );
-};
+    </section> */
+/* //</div> */
 
-export default hero;
+// hero 2
+{
+  /* <div className="relative w-full h-screen"> */
+}
+{
+  /* Background Image */
+}
+{
+  /* <Image
+        src="https://images.unsplash.com/photo-1522252234503-e356532cafd5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw2fHxjb2RlfGVufDB8MHx8fDE2OTQwOTg0MTZ8MA&ixlib=rb-4.0.3&q=80&w=1080"
+        alt="Hero Image"
+        fill
+        quality={100}
+        className="z-0 object-cover"
+      /> */
+}
+
+{
+  /* Gradient Overlay */
+}
+{
+  /* opacity-60 opacity-90 */
+}
+{
+  /* <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent  z-10"></div> */
+}
+
+{
+  /* Text on top */
+}
+{
+  /* <div className="absolute inset-0 flex flex-col items-start justify-center z-20"> */
+}
+{
+  /* <h1 className="text-white text-4xl md:text-6xl font-bold text-center">
+          Your Hero Text Here
+        </h1> */
+}
+{
+  /* <h1
+          className={`text-5xl ${playfairDisplay.className} text-white font-bold leading-tight mb-4 pl-12 text-left max-w-4xl`}
+        >
+          Unlock Your Property Management Potential with Expert Appfolio
+          Solutions
+        </h1>
+        <p
+          className={`${openSans.className} text-lg text-gray-300 mb-8 pl-12 text-left max-w-4xl`}
+        >
+          With over 20 years of combined experience, Prime PM Consulting offers
+          specialized support and consulting to enhance your property management
+          efficiency and profitability. From accounting and bookkeeping to
+          operations and workflow optimization, our dedicated team of experts is
+          here to help you succeed.
+        </p>
+      </div>
+    </div> */
+}

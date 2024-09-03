@@ -6,7 +6,7 @@ import Hero from "@/components/sections/hero";
 
 const Home = () => {
   return (
-    <main>
+    <>
       {/* Hero Section */}
       <Hero />
       {/* Services Section */}
@@ -17,7 +17,7 @@ const Home = () => {
       <Testimonials />
       {/* Contact Us Section */}
       <ContactUs />
-    </main>
+    </>
   );
 };
 
