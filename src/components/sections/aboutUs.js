@@ -78,7 +78,8 @@ const aboutUs = () => {
               </p>
               <Link
                 href="/#contact-us"
-                className={`${openSans.className} inline-flex items-center justify-center text-base font-medium text-center text-white border border-transparent rounded-md py-3 px-7 bg-forest-green hover:bg-opacity-90`}
+                // inline-flex items-center justify-center text-center
+                className={`${openSans.className} text-base font-medium text-white border border-transparent rounded-md py-3 px-7 bg-forest-green hover:bg-opacity-90`}
               >
                 Get Started
               </Link>

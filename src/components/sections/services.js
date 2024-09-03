@@ -6,8 +6,8 @@ const playfairDisplay = Playfair_Display({ subsets: ["latin"] });
 const openSans = Open_Sans({ subsets: ["latin"] });
 
 const services = () => {
-  return (
-    <section id="services" className="bg-white text-black">
+  return ( //When I specify a font style for the parent tag, the children will have the same font style, unless I specify differently for a child tag
+    <section id="services" className={`${openSans.className} bg-white text-black`}>
       {/* for top spacing (from aboutUs): pt-20 lg:pt-[120px] pb-12 lg:pb-[90px] */}
       {/* add h2 services main headline here */}
       <h2
@@ -47,7 +47,7 @@ const services = () => {
               Monthly Accounting Cycles
             </h2>
 
-            <p className={`${openSans.className} mt-1 text-sm text-body-color`}>
+            <p className="mt-1 text-sm text-body-color">
               Ensure accurate and timely financial reporting.
             </p>
           </div>
@@ -55,7 +55,7 @@ const services = () => {
            <div className="rounded-xl p-8 shadow-xl transition">
             <h2 className="mt-4 text-xl font-bold">Bank Reconciliations</h2>
 
-            <p className={`${openSans.className} mt-1 text-sm text-body-color`}>
+            <p className="mt-1 text-sm text-body-color">
               Keep your accounts in perfect balance.
             </p>
           </div>
@@ -63,7 +63,7 @@ const services = () => {
            <div className="rounded-xl p-8 shadow-xl transition">
             <h2 className="mt-4 text-xl font-bold">Business Optimization</h2>
 
-            <p className={`${openSans.className} mt-1 text-sm text-body-color`}>
+            <p className="mt-1 text-sm text-body-color">
               Enhance operational efficiency and drive profitability.
             </p>
           </div>
@@ -96,7 +96,7 @@ const services = () => {
               Accounts Payable Management
             </h2>
 
-            <p className={`${openSans.className} mt-1 text-sm text-body-color`}>
+            <p className="mt-1 text-sm text-body-color">
               Efficiently handle vendor payments and invoices.
             </p>
           </div>
@@ -104,7 +104,7 @@ const services = () => {
            <div className="rounded-xl p-8 shadow-xl transition">
             <h2 className="mt-4 text-xl font-bold">Full-Cycle Accounting</h2>
 
-            <p className={`${openSans.className} mt-1 text-sm text-body-color`}>
+            <p className="mt-1 text-sm text-body-color">
               Comprehensive financial management from transaction recording to
               financial statement preparation.
             </p>
@@ -115,7 +115,7 @@ const services = () => {
               Precise Financial Reporting
             </h2>
 
-            <p className={`${openSans.className} mt-1 text-sm text-body-color`}>
+            <p className="mt-1 text-sm text-body-color">
               Timely and accurate monthly accounting cycles.
             </p>
           </div>
@@ -125,7 +125,7 @@ const services = () => {
               Thorough Bank Reconciliations
             </h2>
 
-            <p className={`${openSans.className} mt-1 text-sm text-body-color`}>
+            <p className="mt-1 text-sm text-body-color">
               Seamless reconciliation to keep your accounts in order.
             </p>
           </div>
@@ -135,7 +135,7 @@ const services = () => {
               Enhanced Financial Management
             </h2>
 
-            <p className={`${openSans.className} mt-1 text-sm text-body-color`}>
+            <p className="mt-1 text-sm text-body-color">
               Strategic insights to optimize your business operations.
             </p>
           </div>
@@ -143,7 +143,7 @@ const services = () => {
            <div className="rounded-xl p-8 shadow-xl transition">
             <h2 className="mt-4 text-xl font-bold">1099 Preparation</h2>
 
-            <p className={`${openSans.className} mt-1 text-sm text-body-color`}>
+            <p className="mt-1 text-sm text-body-color">
               Accurate and timely preparation of 1099 forms for tax compliance.
             </p>
           </div>
@@ -174,7 +174,7 @@ const services = () => {
            <div className="rounded-xl p-8 shadow-xl transition">
             <h2 className="mt-4 text-xl font-bold">Review Current Workflows</h2>
 
-            <p className={`${openSans.className} mt-1 text-sm text-body-color`}>
+            <p className="mt-1 text-sm text-body-color">
               Assess and refine your existing processes to uncover areas for
               improvement.
             </p>
@@ -185,7 +185,7 @@ const services = () => {
               Identify Optimization Opportunities
             </h2>
 
-            <p className={`${openSans.className} mt-1 text-sm text-body-color`}>
+            <p className="mt-1 text-sm text-body-color">
               Discover strategies to enhance efficiency and streamline
               operations.
             </p>
@@ -196,7 +196,7 @@ const services = () => {
               Leverage Integrations and Data Automation
             </h2>
 
-            <p className={`${openSans.className} mt-1 text-sm text-body-color`}>
+            <p className="mt-1 text-sm text-body-color">
               Utilize advanced tools to eliminate manual tasks and automate
               routine processes.
             </p>
@@ -207,7 +207,7 @@ const services = () => {
               Ongoing Training and Support
             </h2>
 
-            <p className={`${openSans.className} mt-1 text-sm text-body-color`}>
+            <p className="mt-1 text-sm text-body-color">
               Ensure your team stays proficient with continuous training and
               expert support, keeping you ahead of industry changes and
               maximizing your use of Appfolio.
@@ -219,7 +219,8 @@ const services = () => {
       <div className="mt-12 text-center">
         {/*  focus:outline-none focus:ring focus:ring-yellow-400 */}
         {/* "inline-block rounded bg-forest-green px-12 py-3 text-sm font-medium transition hover:bg-opacity-90 text-white" */}
-        <Link href="/#contact-us" className={`${openSans.className} inline-flex items-center justify-center text-base font-medium text-center text-white border border-transparent rounded-md py-3 px-7 bg-forest-green hover:bg-opacity-90`}>
+        {/* inline-flex items-center justify-center text-center */}
+        <Link href="/#contact-us" className={`${openSans.className} text-base font-medium text-white border border-transparent rounded-md py-3 px-7 bg-forest-green hover:bg-opacity-90`}>
           Get Started Today
         </Link>
       </div>

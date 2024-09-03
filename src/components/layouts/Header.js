@@ -35,8 +35,8 @@ const Header = () => {
   return (
     <header>
       <nav
-        // text-gray-600
-        className={`bg-beige-100 shadow relative text-base text-slate-700 ${inter.className}`}
+        // text-gray-600 bg-beige-100 
+        className={`shadow relative text-base  ${inter.className}`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="relative flex items-center justify-between h-16">
@@ -74,7 +74,7 @@ const Header = () => {
                     className={`m-2 mb-0 pb-1 transition-colors duration-300 ease-in-out ${
                       isActive
                         ? "border-b-[1px] border-gray-950"
-                        : "hover:border-b-[1px] hover:border-gray-950"
+                        : "hover:border-b-[1px] hover:border-[#637381] hover:text-body-color"
                     }`}
                   >
                     {page}
