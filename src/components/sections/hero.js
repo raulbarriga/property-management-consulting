@@ -57,7 +57,7 @@ const hero = () => {
           {/* From accounting and bookkeeping to operations and workflow
           optimization, our dedicated team of experts is here to help you
           succeed. */}
-          With 20+ years of experience, we streamline your operations&nbsp;—&nbsp;from
+          With 20+ years of combined experience, we streamline your operations&nbsp;—&nbsp;from
           bookkeeping and accounting to workflow optimization. Our team is here
           to boost your efficiency and profitability.
         </p>
