@@ -27,7 +27,7 @@ module.exports = {
       },
       colors: {
         beige: {
-          100: "#a29889",
+          100: "#c0b4a9", // a29889
         },
         "forest-green": "#2E4A32",
         "body-color": "#637381", // for paragraph text

@@ -113,7 +113,8 @@ const Header = () => {
         {/* Mobile Nav Menu */}
         {isMobileMenuOpen && (
           <div
-            className={`md:hidden absolute top-0 min-h-screen overflow-hidden right-0 w-full bg-beige-100  transform origin-top-left ${
+          id="mobile-nav-menu-wrapper"
+            className={`md:hidden absolute top-0 min-h-screen overflow-hidden right-0 w-full bg-beige-100  transform origin-top-left z-30 ${
               isAnimatingOut ? "animate-close-menu" : "animate-open-menu"
             }`}
             aria-label="mobile"
