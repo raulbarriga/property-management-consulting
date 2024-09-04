@@ -33,10 +33,11 @@ const hero = () => {
           //mb-2 min-945px:
           className={`text-3xl sm:text-[2.5rem] min-945px:text-5xl ${playfairDisplay.className} font-semibold min-945px:font-bold mb-4 px-6 min-945px:pl-12 text-left max-w-4xl`}
         >
-          Unlock Your Property Management Potential with Expert Appfolio
-          Solutions
+          {/* Unlock Your Property Management Potential with Expert Appfolio
+          Solutions */}
+          Enhance Your Property Management with Appfolio Expertise
         </h1>
-        <p
+        {/* <p
           // text-gray-300
           //  text-lg text-left
           // max-w-lg
@@ -46,16 +47,19 @@ const hero = () => {
           With over 20 years of combined experience, we offer specialized
           support and consulting to enhance your property management efficiency
           and profitability.
-        </p>
+        </p> */}
         <p
           // text-gray-300
           //  text-lg text-left
           // max-w-lg
           className={`${openSans.className} sm:text-lg/relaxed mb-8 px-6 min-945px:pl-12 max-w-4xl `}
         >
-          From accounting and bookkeeping to operations and workflow
+          {/* From accounting and bookkeeping to operations and workflow
           optimization, our dedicated team of experts is here to help you
-          succeed.
+          succeed. */}
+          With 20+ years of experience, we streamline your operations&nbsp;—&nbsp;from
+          bookkeeping and accounting to workflow optimization. Our team is here
+          to boost your efficiency and profitability.
         </p>
         <Link
           href="#contact-us"
