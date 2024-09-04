@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
+@media (max-width: 839px) {
+  #hero .hero-text-wrap h1,
+  #hero .hero-text-wrap p {
+    text-align: center;
+    text-wrap: balance;
+  }
+  #hero .hero-text-wrap p:nth-of-type(2) {
+    margin-bottom: 1rem;
+  }
+  #hero .hero-text-wrap a {
+    align-self: center;
+  }
+}

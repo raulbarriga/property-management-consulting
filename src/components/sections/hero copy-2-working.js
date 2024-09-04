@@ -10,7 +10,7 @@ const hero = () => {
   return (
     <section
       id="hero"
-      className="relative h-[calc(100vh-64px)] flex items-center justify-start"
+      className="relative h-[calc(100vh-64px)] flex items-center justify-center"
     >
       {/* background image */}
       <div className="absolute inset-0 w-full h-full">
@@ -25,13 +25,13 @@ const hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 via-60% to-transparent"></div>
       </div>
       {/* hero text */}
-      {/* absolute inset-0 */}
-      <div className="hero-text-wrap   text-white z-10 flex flex-col justify-center items-start h-full text-center sm:text-left">
+      {/*  */}
+      <div className="absolute inset-0 text-white z-10 flex flex-col justify-center items-start h-full text-center sm:text-left">
         <h1
           // font-bold leading-tight
           // sm:text-5xl
-          //mb-2 min-945px:
-          className={`text-3xl sm:text-[2.5rem] min-945px:text-5xl ${playfairDisplay.className} font-semibold min-945px:font-bold mb-4 px-6 min-945px:pl-12 text-left max-w-4xl`}
+          //
+          className={`text-3xl sm:text-5xl ${playfairDisplay.className} font-bold mb-4 pl-12 text-left max-w-4xl`}
         >
           Unlock Your Property Management Potential with Expert Appfolio
           Solutions
@@ -41,7 +41,7 @@ const hero = () => {
           //  text-lg text-left
           // max-w-lg
           // mb-8
-          className={`${openSans.className} sm:text-lg/relaxed mb-4 px-6 min-945px:pl-12 max-w-4xl `}
+          className={`${openSans.className} sm:text-lg/relaxed mb-4 pl-12 max-w-4xl `}
         >
           With over 20 years of combined experience, we offer specialized
           support and consulting to enhance your property management efficiency
@@ -51,7 +51,7 @@ const hero = () => {
           // text-gray-300
           //  text-lg text-left
           // max-w-lg
-          className={`${openSans.className} sm:text-lg/relaxed mb-8 px-6 min-945px:pl-12 max-w-4xl `}
+          className={`${openSans.className} sm:text-lg/relaxed mb-8 pl-12 max-w-4xl `}
         >
           From accounting and bookkeeping to operations and workflow
           optimization, our dedicated team of experts is here to help you
@@ -59,7 +59,7 @@ const hero = () => {
         </p>
         <Link
           href="#contact-us"
-          className={`${openSans.className} ml-6 min-945px:ml-12 text-base font-medium border border-transparent rounded-md py-3 px-7 bg-forest-green hover:bg-opacity-90`}
+          className={`${openSans.className} ml-12 text-base font-medium border border-transparent rounded-md py-3 px-7 bg-forest-green hover:bg-opacity-90`}
         >
           Get Started Today
         </Link>

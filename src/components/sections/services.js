@@ -5,6 +5,7 @@ import Link from "next/link";
 const playfairDisplay = Playfair_Display({ subsets: ["latin"] });
 const openSans = Open_Sans({ subsets: ["latin"] });
 
+// source: https://www.hyperui.dev/components/marketing/sections
 const services = () => {
   return ( //When I specify a font style for the parent tag, the children will have the same font style, unless I specify differently for a child tag
     <section id="services" className={`${openSans.className} bg-white text-black`}>
