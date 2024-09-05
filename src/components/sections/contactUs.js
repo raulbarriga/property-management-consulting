@@ -13,7 +13,7 @@ const contactUs = () => {
   return (
     <section
       id="contact-us"
-      className="relative z-10 overflow-hidden bg-white pb-20 lg:pb-[120px]"
+      className="relative z-10 overflow-hidden bg-beige-100 pb-20 lg:pb-[120px]"
     >
       <h2
         className={`text-black custom-about-lg:mb-5 ${playfairDisplay.className} text-6xl custom-headers-xs:text-[4.5rem] custom-headers:text-[5rem] font-normal text-center pt-20 lg:pt-[120px] pb-12 lg:pb-[90px]`}
@@ -43,7 +43,7 @@ const contactUs = () => {
               </p>
               {/* location */}
               <div className="mb-8 flex w-full max-w-[370px]">
-                <div className="mr-6 hidden min-375px:flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-forest-green/5 text-forest-green sm:h-[70px] sm:max-w-[70px]">
+                <div className="mr-6 hidden min-375px:flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-forest-green/5 text-black sm:h-[70px] sm:max-w-[70px]">
                   <svg
                     width="32"
                     height="32"
@@ -62,7 +62,7 @@ const contactUs = () => {
                     Our Location
                   </h4>
                   <p
-                    className={`${openSans.className} text-base text-body-color`}
+                    className={`${openSans.className} text-base text-[#6E6E6E]`}
                   >
                     99 S.t Jomblo Park Pekanbaru 28292. Indonesia
                   </p>
@@ -70,7 +70,7 @@ const contactUs = () => {
               </div>
               {/* phone */}
               <div className="mb-8 flex w-full max-w-[370px]">
-                <div className="mr-6 hidden min-375px:flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-forest-green/5 text-forest-green sm:h-[70px] sm:max-w-[70px]">
+                <div className="mr-6 hidden min-375px:flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-black/5 text-black sm:h-[70px] sm:max-w-[70px]">
                   <svg
                     width="32"
                     height="32"
@@ -104,7 +104,7 @@ const contactUs = () => {
                     Phone Number
                   </h4>
                   <p
-                    className={`${openSans.className} text-base text-body-color`}
+                    className={`${openSans.className} text-base text-[#6E6E6E]`}
                   >
                     (+62)81 414 257 9980
                   </p>
@@ -112,7 +112,7 @@ const contactUs = () => {
               </div>
               {/* email */}
               <div className="mb-8 flex w-full max-w-[370px]">
-                <div className="mr-6 hidden min-375px:flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-forest-green/5 text-forest-green sm:h-[70px] sm:max-w-[70px]">
+                <div className="mr-6 hidden min-375px:flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-forest-green/5 text-black sm:h-[70px] sm:max-w-[70px]">
                   <svg
                     width="32"
                     height="32"
@@ -132,7 +132,7 @@ const contactUs = () => {
                   </h4>
                   <Link
                     href="mailto:amanda@primepmconsulting.com"
-                    className="text-base text-body-color"
+                    className="text-base text-[#6E6E6E]"
                   >
                     amanda@primepmconsulting.com
                   </Link>
@@ -142,7 +142,7 @@ const contactUs = () => {
           </div>
           {/* right side */}
           <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
-            <div className="relative rounded-lg bg-white p-8 shadow-2xl sm:p-12">
+            <div className="relative rounded-lg bg-[#efe5dc] p-8 shadow-xl sm:p-12">
               <ContactForm />
             </div>
           </div>

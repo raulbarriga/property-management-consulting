@@ -8,7 +8,7 @@ const openSans = Open_Sans({ subsets: ["latin"] });
 // source: https://www.hyperui.dev/components/marketing/sections
 const services = () => {
   return ( //When I specify a font style for the parent tag, the children will have the same font style, unless I specify differently for a child tag
-    <section id="services" className={`${openSans.className} bg-white text-black`}>
+    <section id="services" className={`${openSans.className} bg-beige-100 text-black`}>
       {/* for top spacing (from aboutUs): pt-20 lg:pt-[120px] pb-12 lg:pb-[90px] */}
       {/* add h2 services main headline here */}
       <h2
@@ -43,28 +43,28 @@ const services = () => {
         >
           {/* card 1 */}
           {/* border border-gray-800 hover:border-pink-500/10 hover:shadow-forest-green/10 */}
-           <div className="rounded-xl p-8 shadow-xl transition ">
+           <div className="rounded-xl p-8 shadow-xl bg-[#efe5dc] ">
             <h2 className="mt-4 text-xl font-bold">
               Monthly Accounting Cycles
             </h2>
 
-            <p className="mt-1 text-sm text-body-color">
+            <p className="mt-1 text-base  text-body-color">
               Ensure accurate and timely financial reporting.
             </p>
           </div>
 
-           <div className="rounded-xl p-8 shadow-xl transition">
+           <div className="rounded-xl p-8 shadow-xl bg-[#efe5dc]">
             <h2 className="mt-4 text-xl font-bold">Bank Reconciliations</h2>
 
-            <p className="mt-1 text-sm text-body-color">
+            <p className="mt-1 text-base  text-body-color">
               Keep your accounts in perfect balance.
             </p>
           </div>
 
-           <div className="rounded-xl p-8 shadow-xl transition">
+           <div className="rounded-xl p-8 shadow-xl bg-[#efe5dc]">
             <h2 className="mt-4 text-xl font-bold">Business Optimization</h2>
 
-            <p className="mt-1 text-sm text-body-color">
+            <p className="mt-1 text-base  text-body-color">
               Enhance operational efficiency and drive profitability.
             </p>
           </div>
@@ -92,59 +92,59 @@ const services = () => {
           className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
         >
           {/* card 1 */}
-           <div className="rounded-xl p-8 shadow-xl transition">
+           <div className="rounded-xl p-8 shadow-xl bg-[#efe5dc]">
             <h2 className="mt-4 text-xl font-bold">
               Accounts Payable Management
             </h2>
 
-            <p className="mt-1 text-sm text-body-color">
+            <p className="mt-1 text-base  text-body-color">
               Efficiently handle vendor payments and invoices.
             </p>
           </div>
           {/* card 2 */}
-           <div className="rounded-xl p-8 shadow-xl transition">
+           <div className="rounded-xl p-8 shadow-xl bg-[#efe5dc]">
             <h2 className="mt-4 text-xl font-bold">Full-Cycle Accounting</h2>
 
-            <p className="mt-1 text-sm text-body-color">
+            <p className="mt-1 text-base  text-body-color">
               Comprehensive financial management from transaction recording to
               financial statement preparation.
             </p>
           </div>
           {/* card 3 */}
-           <div className="rounded-xl p-8 shadow-xl transition">
+           <div className="rounded-xl p-8 shadow-xl bg-[#efe5dc]">
             <h2 className="mt-4 text-xl font-bold">
               Precise Financial Reporting
             </h2>
 
-            <p className="mt-1 text-sm text-body-color">
+            <p className="mt-1 text-base  text-body-color">
               Timely and accurate monthly accounting cycles.
             </p>
           </div>
           {/* card 4 */}
-           <div className="rounded-xl p-8 shadow-xl transition">
+           <div className="rounded-xl p-8 shadow-xl bg-[#efe5dc]">
             <h2 className="mt-4 text-xl font-bold">
               Thorough Bank Reconciliations
             </h2>
 
-            <p className="mt-1 text-sm text-body-color">
+            <p className="mt-1 text-base  text-body-color">
               Seamless reconciliation to keep your accounts in order.
             </p>
           </div>
           {/* card 5 */}
-           <div className="rounded-xl p-8 shadow-xl transition">
+           <div className="rounded-xl p-8 shadow-xl bg-[#efe5dc]">
             <h2 className="mt-4 text-xl font-bold">
               Enhanced Financial Management
             </h2>
 
-            <p className="mt-1 text-sm text-body-color">
+            <p className="mt-1 text-base  text-body-color">
               Strategic insights to optimize your business operations.
             </p>
           </div>
           {/* card 6 */}
-           <div className="rounded-xl p-8 shadow-xl transition">
+           <div className="rounded-xl p-8 shadow-xl bg-[#efe5dc]">
             <h2 className="mt-4 text-xl font-bold">1099 Preparation</h2>
 
-            <p className="mt-1 text-sm text-body-color">
+            <p className="mt-1 text-base  text-body-color">
               Accurate and timely preparation of 1099 forms for tax compliance.
             </p>
           </div>
@@ -172,43 +172,43 @@ const services = () => {
           className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
         >
           {/* card 1 */}
-           <div className="rounded-xl p-8 shadow-xl transition">
+           <div className="rounded-xl p-8 shadow-xl bg-[#efe5dc]">
             <h2 className="mt-4 text-xl font-bold">Review Current Workflows</h2>
 
-            <p className="mt-1 text-sm text-body-color">
+            <p className="mt-1 text-base  text-body-color">
               Assess and refine your existing processes to uncover areas for
               improvement.
             </p>
           </div>
 
-           <div className="rounded-xl p-8 shadow-xl transition">
+           <div className="rounded-xl p-8 shadow-xl bg-[#efe5dc]">
             <h2 className="mt-4 text-xl font-bold">
               Identify Optimization Opportunities
             </h2>
 
-            <p className="mt-1 text-sm text-body-color">
+            <p className="mt-1 text-base  text-body-color">
               Discover strategies to enhance efficiency and streamline
               operations.
             </p>
           </div>
           {/* card 3 */}
-           <div className="rounded-xl p-8 shadow-xl transition">
+           <div className="rounded-xl p-8 shadow-xl bg-[#efe5dc]">
             <h2 className="mt-4 text-xl font-bold">
               Leverage Integrations and Data Automation
             </h2>
 
-            <p className="mt-1 text-sm text-body-color">
+            <p className="mt-1 text-base  text-body-color">
               Utilize advanced tools to eliminate manual tasks and automate
               routine processes.
             </p>
           </div>
           {/* card 4 */}
-           <div className="rounded-xl p-8 shadow-xl transition">
+           <div className="rounded-xl p-8 shadow-xl bg-[#efe5dc]">
             <h2 className="mt-4 text-xl font-bold">
               Ongoing Training and Support
             </h2>
 
-            <p className="mt-1 text-sm text-body-color">
+            <p className="mt-1 text-base  text-body-color">
               Ensure your team stays proficient with continuous training and
               expert support, keeping you ahead of industry changes and
               maximizing your use of Appfolio.
@@ -219,9 +219,9 @@ const services = () => {
       {/* row for button */}
       <div className="mt-12 text-center">
         {/*  focus:outline-none focus:ring focus:ring-yellow-400 */}
-        {/* "inline-block rounded bg-forest-green px-12 py-3 text-sm font-medium transition hover:bg-opacity-90 text-white" */}
+        {/* "inline-block rounded bg-forest-green px-12 py-3 text-base  font-medium hover:bg-opacity-90 text-white" */}
         {/* inline-flex items-center justify-center text-center */}
-        <Link href="/#contact-us" className={`${openSans.className} text-base font-medium text-white border border-transparent rounded-md py-3 px-7 bg-forest-green hover:bg-opacity-90`}>
+        <Link href="/#contact-us" className={`${openSans.className} text-base font-medium text-white border border-transparent rounded-md py-3 px-7 bg-black hover:bg-[#f1ede7] hover:border hover:border-black hover:text-black`}>
           Get Started Today
         </Link>
       </div>

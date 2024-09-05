@@ -33,10 +33,10 @@ const Header = () => {
   };
 
   return (
-    <header>
+    <header className="bg-beige-100">
       <nav
         // text-gray-600 bg-beige-100 
-        className={`shadow relative text-base  ${inter.className}`}
+        className={`shadow relative text-base ${inter.className}`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="relative flex items-center justify-between h-16">
@@ -45,7 +45,7 @@ const Header = () => {
               <div className="flex-shrink-0">
                 <Link href={"/"} className="">
                   <h3
-                    className={`self-center text-[1.375rem] font-medium whitespace-nowrap tracking-[0.031em] ${bodoniModa.className}`}
+                    className={`self-center text-[1.375rem] text-black font-medium whitespace-nowrap tracking-[0.031em] ${bodoniModa.className}`}
                   >
                     Prime PM Consulting
                   </h3>
@@ -73,8 +73,8 @@ const Header = () => {
                     } // handle active link state using next.js since tailwind css won't
                     className={`m-2 mb-0 pb-1 transition-colors duration-300 ease-in-out ${
                       isActive
-                        ? "border-b-[1px] border-gray-950"
-                        : "hover:border-b-[1px] hover:border-[#637381] hover:text-body-color"
+                        ? "text-body-color"
+                        : "hover:border-b-[1px] hover:border-black hover:-mb-[1px] hover:text-black"
                     }`}
                   >
                     {page}

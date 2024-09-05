@@ -116,7 +116,7 @@ const ContactForm = () => {
             type="submit"
             disabled={isSubmitting}
             // p-3 removed w-full to keep button small & not too wide
-            className={`${openSans.className} rounded-md border border-forest-green bg-forest-green py-3 px-7 text-white transition hover:bg-opacity-90`}
+            className={`${openSans.className} rounded-md border border-transparent py-3 px-7 text-white transition bg-black hover:bg-transparent hover:border hover:border-black hover:text-black`}
           >
             {isSubmitting ? "Sending..." : "Send Message"}
           </button>

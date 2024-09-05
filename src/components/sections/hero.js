@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Playfair_Display, Open_Sans } from "next/font/google";
-// import Video from "../../../public/video/San Francisco Bay.mp4";
+import Img from "../../../public/video/poster-img.png"
 
 const playfairDisplay = Playfair_Display({ subsets: ["latin"] });
 const openSans = Open_Sans({ subsets: ["latin"] });
@@ -14,34 +14,37 @@ const hero = () => {
       className="relative h-[calc(100vh-64px)] flex items-center justify-start"
     >
       {/* background image */}
-      <div className="absolute inset-0 w-full h-full">
-        {/* <Image
-          src="https://images.unsplash.com/photo-1522252234503-e356532cafd5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw2fHxjb2RlfGVufDB8MHx8fDE2OTQwOTg0MTZ8MA&ixlib=rb-4.0.3&q=80&w=1080"
+      {/* md:hidden will hide the image on viewport widths of 768px & higher */}
+      <div className="md:hidden absolute inset-0 w-full h-full">
+        <Image
+        // "/public/video/poster-img.png"
+          src={Img}
           alt="Background Image"
           fill
           priority
           // object-center
           className="object-cover"
-        /> */}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 via-60% to-transparent"></div>
+      </div>
+      {/* video background */}
+      {/* hidden by default, md:block shows the video only on viewport widths of 768px & higher */}
+      <div className="hidden md:block absolute inset-0 w-full h-full">
         <video
-            muted
-            playsInline
-            // poster={"https://res.cloudinary.com/raba64577/image/upload/v1638930549/JB%20and%20B%20Construction%2C%20Inc./Remodeling/Project-2/image6.jpg"}
-            loop
-            autoPlay
-          >
-            {/* a better quality of images video */}
-            {/* but it's 70.18MB on Cloudinary (for desktops/laptops only) */}
-            <source
-              src="/video/San Francisco Bay.mp4"
-              type="video/mp4"
-            />
-          </video>
+          muted
+          playsInline
+          poster="../../../public/video/poster-img.png"
+          loop
+          autoPlay
+        >
+          {/* video height needs fixing */}
+          <source src="/video/San Francisco Bay.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 via-60% to-transparent"></div>
       </div>
       {/* hero text */}
       {/* absolute inset-0 */}
-      <div className="hero-text-wrap   text-white z-10 flex flex-col justify-center items-start h-full text-center sm:text-left">
+      <div className="hero-text-wrap text-white z-10 flex flex-col justify-center items-start h-full text-center sm:text-left">
         <h1
           // font-bold leading-tight
           // sm:text-5xl
@@ -72,9 +75,10 @@ const hero = () => {
           {/* From accounting and bookkeeping to operations and workflow
           optimization, our dedicated team of experts is here to help you
           succeed. */}
-          With 20+ years of combined experience, we streamline your operations&nbsp;—&nbsp;from
-          bookkeeping and accounting to workflow optimization. Our team is here
-          to boost your efficiency and profitability.
+          With 20+ years of combined experience, we streamline your
+          operations&nbsp;—&nbsp;from bookkeeping and accounting to workflow
+          optimization. Our team is here to boost your efficiency and
+          profitability.
         </p>
         <Link
           href="#contact-us"

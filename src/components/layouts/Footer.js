@@ -12,7 +12,7 @@ const Footer = () => {
   // then adjust the columns & breakpoints as needed to fit the content with the new logo
   return (
     <footer
-      className={`text-slate-700 text-base bg-white tracking-wide ${inter.className}`}
+      className={`text-slate-700 text-base bg-beige-100 tracking-wide ${inter.className}`}
     >
       <div className="pt-14 pb-8 px-6 sm:px-10">
         {/* container for all columns */}
@@ -32,11 +32,11 @@ const Footer = () => {
                 />
               </Link>
             </div>
-            <p className="max-w-[30rem] text-balance">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
-              cumque culpa. Quibusdam tenetur, fugit error maiores nostrum
-              similique cum ea, obcaecati saepe ipsa eveniet aperiam voluptatem
-              autem eligendi commodi accusamus?
+            <p className="max-w-[30rem] text-balance text-body-color">
+              With 20+ years of combined experience, we streamline your
+              operations — from bookkeeping and accounting to workflow
+              optimization. Our team is here to boost your efficiency and
+              profitability.
             </p>
           </div>
 
@@ -50,8 +50,8 @@ const Footer = () => {
               id="company"
               className="md:col-span-1 lg:col-span-3 xl:col-span-1"
             >
-              <h4 className=" font-semibold ">Company</h4>
-              <ul className="list-none mt-4 space-y-2">
+              <h4 className="font-semibold text-black">Company</h4>
+              <ul className="list-none mt-4 space-y-2 text-body-color">
                 {pagesArr.map((page) => (
                   <li key={page}>
                     <Link
@@ -74,8 +74,8 @@ const Footer = () => {
               id="business"
               className="md:col-span-1 lg:col-span-4 xl:col-span-1"
             >
-              <h4 className="font-semibold ">Business Hours</h4>
-              <ul className="mt-4 space-y-2">
+              <h4 className="font-semibold text-black">Business Hours</h4>
+              <ul className="mt-4 space-y-2 text-body-color">
                 <li className="">Mon - Fri: 8am - 5pm</li>
               </ul>
             </div>
@@ -85,8 +85,8 @@ const Footer = () => {
               id="contact"
               className="md:col-span-2 lg:col-span-4 xl:col-span-1 "
             >
-              <h4 className="font-semibold ">Contact Us</h4>
-              <ul className="mt-4 space-y-2">
+              <h4 className="font-semibold text-black">Contact Us</h4>
+              <ul className="mt-4 space-y-2 text-body-color">
                 <li className="">012-345-6789</li>
                 <li className="">
                   <Link href={"mailto:amanda@primepmconsulting.com"}>
@@ -98,11 +98,11 @@ const Footer = () => {
           </div>
         </div>
         {/* //  bottom portion of the footer */}
-        <div className="border-t-[1px] border-gray-200 mt-16 pt-8 sm:mt-20 lg:mt-24">
+        <div className="border-t-[1px] border-black text-body-color mt-16 pt-8 sm:mt-20 lg:mt-24">
           <span className=" sm:text-center ">
-            © 2023{" "}
-            <a href="https://flowbite.com/" className="">
-              Flowbite™
+            © 2024 Proudly created by
+            <a href="https://github.com/raulbarriga" className="">
+              Raul Barriga
             </a>
             . All Rights Reserved.
           </span>

@@ -13,7 +13,7 @@ const aboutUs = () => {
     // bg-white bg-beige-100/70 pt-20 pt-10
     <section
       id="about-us"
-      className="overflow-hidden px-5 pt-0 pb-12 lg:pb-[90px] text-body-color bg-white"
+      className="overflow-hidden px-5 pt-0 pb-12 lg:pb-[90px] text-body-color bg-beige-100"
     >
       <h2
         className={`text-black custom-about-lg:mb-5 ${playfairDisplay.className} text-6xl custom-headers-xs:text-[4.5rem] custom-headers:text-[5rem] font-normal text-center pt-20 lg:pt-[120px] pb-12 lg:pb-[90px]`}
@@ -46,8 +46,8 @@ const aboutUs = () => {
               {/* <span className="block mb-4 text-lg font-semibold text-blue-600">
                 Why Choose Us
               </span> */}
-              {/* mb-5 text-3xl font-bold text-black sm:text-[40px]/[48px] */}
-              <span className="block mb-4 text-xl font-bold text-forest-green">
+              {/* mb-5 text-3xl font-bold text-body-color sm:text-[40px]/[48px] */}
+              <span className="block mb-4 text-xl font-bold text-black">
                 Why Choose Us
               </span>
               <h2 className="mb-5 text-3xl font-bold text-black sm:text-[40px]/[48px]">
@@ -56,13 +56,13 @@ const aboutUs = () => {
               </h2>
               {/* mb-5 text-base text-gray-600 */}
               <p className={`${openSans.className} text-lg text-body-color text-pretty`}>
-                <span className="font-bold text-pretty">
+                <span className="font-bold text-black text-pretty">
                   Prime PM Consulting
                 </span>{" "}
                 is the leading expert in Appfolio solutions, providing a
                 comprehensive range of services including day-to-day support,
                 accounting, and operations. With{" "}
-                <span className="font-bold text-pretty">
+                <span className="font-bold text-black text-pretty">
                   over 20 years of combined experience
                 </span>
                 , our dedicated team of Appfolio experts has a proven track
@@ -72,14 +72,14 @@ const aboutUs = () => {
               </p>
               {/* "mb-8 text-base text-gray-600" */}
               <p className={`${openSans.className} text-lg text-body-color py-5 text-pretty`}>
-                <span className="font-bold">Contact us today</span> to learn
+                <span className="font-bold text-black">Contact us today</span> to learn
                 more about taking the next steps and refining your property
                 management business.
               </p>
               <Link
                 href="/#contact-us"
                 // inline-flex items-center justify-center text-center
-                className={`${openSans.className} text-base font-medium text-white border border-transparent rounded-md py-3 px-7 bg-forest-green hover:bg-opacity-90`}
+                className={`${openSans.className} text-base font-medium text-white border border-transparent rounded-md py-3 px-7 bg-black hover:bg-[#f1ede7] hover:border hover:border-black hover:text-body-color`}
               >
                 Get Started
               </Link>

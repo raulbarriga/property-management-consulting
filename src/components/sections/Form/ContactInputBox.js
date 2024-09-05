@@ -14,8 +14,8 @@ const ContactInputBox = ({ type, placeholder, name, id }) => {
           type={type}
           placeholder={placeholder}
           name={name}
-          className="w-full bg-transparent rounded-md border border-stroke px-[14px] py-3  text-dark-6 outline-none transition focus:border-primary active:border-primary"
-          //   py-[10px] pr-3 pl-12
+          className="w-full bg-[#efe5dc] rounded-md border border-stroke border-black px-[14px] py-3  text-body-color outline-none"
+          //   py-[10px] pr-3 pl-12 focus:border-primary active:border-primary
           //   disabled:cursor-default disabled:bg-gray-2
         />
       </div>

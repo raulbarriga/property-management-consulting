@@ -27,10 +27,10 @@ module.exports = {
       },
       colors: {
         beige: {
-          100: "#c0b4a9", // a29889
+          100: "#f1ede7", // a29889
         },
         "forest-green": "#2E4A32",
-        "body-color": "#637381", // for paragraph text
+        "body-color": "#6d6b68", // for paragraph text (old):#637381, 2nd black) #6E6E6E
       },
       width: {
         "custom-about-calc": "calc(((100% - 1140px) / 2) + 866px)",
@@ -66,7 +66,7 @@ module.exports = {
         "close-menu": "close-menu 0.5s ease-in-out forwards",
       },
       boxShadow: {
-        "faded-all": "inset 0 0 40px 16px #fff", // from https://codepen.io/burtclan/pen/PoOOey?editors=0100
+        "faded-all": "inset 0 0 40px 16px #f1ede7", // from https://codepen.io/burtclan/pen/PoOOey?editors=0100
       },
     },
     plugins: [require("tailwindcss-animated")],
