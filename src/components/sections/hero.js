@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Playfair_Display, Open_Sans } from "next/font/google";
+// import Video from "../../../public/video/San Francisco Bay.mp4";
 
 const playfairDisplay = Playfair_Display({ subsets: ["latin"] });
 const openSans = Open_Sans({ subsets: ["latin"] });
@@ -14,14 +15,28 @@ const hero = () => {
     >
       {/* background image */}
       <div className="absolute inset-0 w-full h-full">
-        <Image
+        {/* <Image
           src="https://images.unsplash.com/photo-1522252234503-e356532cafd5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw2fHxjb2RlfGVufDB8MHx8fDE2OTQwOTg0MTZ8MA&ixlib=rb-4.0.3&q=80&w=1080"
           alt="Background Image"
           fill
           priority
           // object-center
           className="object-cover"
-        />
+        /> */}
+        <video
+            muted
+            playsInline
+            // poster={"https://res.cloudinary.com/raba64577/image/upload/v1638930549/JB%20and%20B%20Construction%2C%20Inc./Remodeling/Project-2/image6.jpg"}
+            loop
+            autoPlay
+          >
+            {/* a better quality of images video */}
+            {/* but it's 70.18MB on Cloudinary (for desktops/laptops only) */}
+            <source
+              src="/video/San Francisco Bay.mp4"
+              type="video/mp4"
+            />
+          </video>
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 via-60% to-transparent"></div>
       </div>
       {/* hero text */}
