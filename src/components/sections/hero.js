@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Playfair_Display, Open_Sans } from "next/font/google";
-import Img from "../../../public/video/poster-img.png"
+import Img from "../../../public/images/poster-img.png"
 
 const playfairDisplay = Playfair_Display({ subsets: ["latin"] });
 const openSans = Open_Sans({ subsets: ["latin"] });
