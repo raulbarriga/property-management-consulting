@@ -102,7 +102,7 @@ const Footer = () => {
           <span className=" sm:text-center ">
             © 2024 Proudly created by
             <a href="https://github.com/raulbarriga" className="">
-              Raul Barriga
+              {" "}Raul Barriga
             </a>
             . All Rights Reserved.
           </span>
