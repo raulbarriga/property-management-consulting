@@ -37,7 +37,7 @@ const hero = () => {
         bg-gradient-to-r from-[#efe5dc] via-[#efe5dc]/30 via-70% to-transparent */}
         <div 
         // from bottom-left to top-right (covers more of the text on smallest screen widths close to 320px)
-        className="absolute inset-0 bg-gradient-to-tr from-[#efe5dc] via-[#efe5dc]/30 to-transparent via-[70%]"></div>
+        className="absolute inset-0 bg-gradient-to-tr from-black via-black/30 to-transparent via-[70%]"></div>
       </div>
       {/* video background */}
       {/* hidden by default, md:block shows the video only on viewport widths of 768px & higher */}
@@ -54,17 +54,18 @@ const hero = () => {
           <source src="/video/San Francisco Bay.mp4" type="video/mp4" />
         </video>
         {/* bg-gradient-to-r from-[#efe5dc] via-[#efe5dc]/30 via-70% to-transparent */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#efe5dc] via-[#efe5dc]/30 to-transparent via-[70%]"></div>
+        {/* from-[#efe5dc] via-[#efe5dc]/30 */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/30 to-transparent via-[70%]"></div>
       </div>
       {/* hero text */}
       <div className="hero-text-wrap text-white z-10 flex flex-col justify-center items-start h-full text-center sm:text-left">
         <h1
-          className={`text-3xl sm:text-[2.5rem] min-945px:text-5xl ${playfairDisplay.className} font-semibold min-945px:font-bold mb-4 px-6 min-945px:pl-12 text-left max-w-4xl text-black`}
+          className={`text-3xl sm:text-[2.5rem] text-[#f1ede7] min-945px:text-5xl ${playfairDisplay.className} font-semibold min-945px:font-bold mb-4 px-6 min-945px:pl-12 text-left max-w-4xl`}
         >
           Enhance Your Property Management with Appfolio Expertise
         </h1>
         <p
-          className={`${openSans.className} sm:text-lg/relaxed mb-8 px-6 min-945px:pl-12 max-w-4xl text-black`}
+          className={`${openSans.className} text-[#f1ede7] sm:text-lg/relaxed mb-8 px-6 min-945px:pl-12 max-w-4xl`}
         >
           With 20+ years of combined experience, we streamline your
           operations&nbsp;—&nbsp;from bookkeeping and accounting to workflow
@@ -73,7 +74,10 @@ const hero = () => {
         </p>
         <Link
           href="#contact-us"
-          className={`${openSans.className} ml-6 min-945px:ml-12 text-base font-medium border border-transparent rounded-md py-3 px-7 bg-black hover:bg-transparent hover:border hover:border-black hover:text-black`}
+          /*
+className={`${openSans.className} ml-6 min-945px:ml-12 text-base font-medium border border-transparent rounded-md py-3 px-7 bg-black hover:bg-transparent hover:border hover:border-black hover:text-black`}
+          */
+          className={`${openSans.className} text-black ml-6 min-945px:ml-12 text-base font-medium border border-transparent rounded-md py-3 px-7 bg-beige-100 hover:bg-black hover:border hover:border-[#f1ede7] hover:text-white`}
         >
           Get Started Today
         </Link>
