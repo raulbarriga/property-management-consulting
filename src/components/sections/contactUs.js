@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { Playfair_Display, Open_Sans } from "next/font/google";
-import ContactForm from "./ContactForm";
+import ContactForm from "./Form/ContactForm";
 
 const playfairDisplay = Playfair_Display({ subsets: ["latin"] });
 const openSans = Open_Sans({ subsets: ["latin"] });
@@ -29,11 +29,11 @@ const contactUs = () => {
               {/* <span className="mb-4 block text-base font-semibold text-forest-green">
                 Contact Us
               </span> */}
-              <h2 className="mb-6 text-[32px] font-bold text-black sm:text-[40px] lg:text-[36px] xl:text-[40px] text-pretty">
+              <h2 className="mb-6 text-[32px] text-center sm:text-left font-bold text-black sm:text-[40px] lg:text-[36px] xl:text-[40px] text-pretty">
                 Get In Touch With Us
               </h2>
               <p
-                className={`${openSans.className} mb-9 text-base leading-relaxed text-body-color`}
+                className={`${openSans.className} mb-9 text-base text-center sm:text-left leading-relaxed text-body-color`}
               >
                 Whether you have a question or want to explore how we can help
                 manage your property management business more effectively,
@@ -64,7 +64,7 @@ const contactUs = () => {
                   <p
                     className={`${openSans.className} text-base text-[#6E6E6E]`}
                   >
-                    99 S.t Jomblo Park Pekanbaru 28292. Indonesia
+                    1234 S Bascom Ave, Suite 456, San Jose, CA 95128
                   </p>
                 </div>
               </div>

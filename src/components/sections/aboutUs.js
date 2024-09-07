@@ -71,7 +71,7 @@ const aboutUs = () => {
                 enhance efficiency, and drive success.
               </p>
               {/* "mb-8 text-base text-gray-600" */}
-              <p className={`${openSans.className} text-lg text-body-color py-5 text-pretty`}>
+              <p className={`${openSans.className} text-lg text-body-color pt-5 text-pretty`}>
                 <span className="font-bold text-black">Contact us today</span> to learn
                 more about taking the next steps and refining your property
                 management business.
@@ -79,7 +79,7 @@ const aboutUs = () => {
               <Link
                 href="/#contact-us"
                 // inline-flex items-center justify-center text-center
-                className={`${openSans.className} text-base font-medium text-white border border-transparent rounded-md py-3 px-7 bg-black hover:bg-[#f1ede7] hover:border hover:border-black hover:text-body-color`}
+                className={`${openSans.className} inline-block mt-5 text-base font-medium text-white border border-transparent rounded-md py-3 px-7 bg-black hover:bg-[#f1ede7] hover:border hover:border-black hover:text-body-color`}
               >
                 Get Started
               </Link>

@@ -14,7 +14,7 @@ const Footer = () => {
     <footer
       className={`text-slate-700 text-base bg-beige-100 tracking-wide ${inter.className}`}
     >
-      <div className="pt-14 pb-8 px-6 sm:px-10">
+      <div className="pt-14 pb-8 px-6 [@media(max-width:370px)]:px-4 sm:px-10">
         {/* container for all columns */}
         <div
           id="grid-parent"

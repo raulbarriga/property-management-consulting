@@ -11,6 +11,11 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'i.ibb.co',
       },
+      {// https://tailwindui.com/img/logos/tuple-logo-gray-900.svg
+        protocol: 'https',
+        hostname: 'tailwindui.com',
+        pathname: 'img/logos'
+      },
     ],
   },
 };

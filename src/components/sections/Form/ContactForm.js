@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import { Open_Sans } from "next/font/google";
 import { useForm } from "react-hook-form";
-import ContactInputBox from "./Form/ContactInputBox";
-import ContactTextArea from "./Form/ContactTextArea";
+import ContactInputBox from "./ContactInputBox";
+import ContactTextArea from "./ContactTextArea";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 

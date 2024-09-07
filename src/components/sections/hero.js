@@ -19,12 +19,7 @@ const hero = () => {
         <Image
           // instrinsic size: 1200 × 674 px
           src={Img}
-          alt="Background Image"
-          // priority
-          // width={1200}
-          // height={674}
-          // object-center
-          // className="object-cover"
+          alt="Aeral view of San Francisco's Golden Gate Bridge"
           fill
           priority
           sizes="100vw"
@@ -45,13 +40,13 @@ const hero = () => {
         <video
           muted
           playsInline
-          poster="../../../public/images/poster-img.png"
+          poster="/images/poster-img.png"
           loop
           autoPlay
           className="w-full h-full object-cover"
         >
           {/* video height needs fixing */}
-          <source src="/video/San Francisco Bay.mp4" type="video/mp4" />
+          <source src="/video/San Francisco Bay.mp4" alt="from pexels.com: aerial-view-of-the-golden-gate-bridge-14623516" type="video/mp4" />
         </video>
         {/* bg-gradient-to-r from-[#efe5dc] via-[#efe5dc]/30 via-70% to-transparent */}
         {/* from-[#efe5dc] via-[#efe5dc]/30 */}
