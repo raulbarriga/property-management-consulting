@@ -28,10 +28,9 @@ const testimonials = () => {
       </div>
       {/* testimonial wrapper */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div id="testimonial-inner-wrap" className="mx-auto grid max-w-2xl grid-cols-1 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-8 xl:gap-12">
+        <div id="testimonial-inner-wrap" className="mx-auto grid max-w-2xl grid-cols-1 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           {/* testimonial 1 */}
-          {/* sm:pb-16 lg:pb-0 */}
-          <div className="flex flex-col pb-10 lg:pr-8 xl:pr-20">
+          <div className="flex flex-col pb-10 sm:pb-16 lg:pb-0 lg:pr-8 xl:pr-20">
             <div className="relative h-12 w-[105px] self-start">
               <Image
                 alt=""
@@ -69,8 +68,7 @@ const testimonials = () => {
             </figure>
           </div>
           {/* testimonial 2 */}
-          {/* lg:pt-0 sm:pt-16 sm:pt-16 pt-10 */}
-          <div className="flex flex-col border-t-[1px] border-black lg:border-l-[1px] lg:border-t-0 lg:pl-8 py-10 lg:pb-10 lg:pt-0 xl:pl-20">
+          <div className="flex flex-col border-t-[1px] border-black pt-10 sm:pt-16 lg:border-l-[1px] lg:border-t-0 lg:pl-8 lg:pt-0 xl:pl-20">
             <div className="relative h-12 w-[104px] self-start">
               <Image
                 alt=""
@@ -107,24 +105,22 @@ const testimonials = () => {
             </figure>
           </div>
           {/* testimonial 3 */}
-          {/* pb-10 sm:pb-16 */}
-          <div className="flex flex-col py-10 lg:pb-0 lg:pr-8 xl:pr-20 border-t-[1px] border-black lg:border-l-0 lg:border-t-[1px]">
-            <div className="relative h-12 w-[105px] self-start">
+          <div className="flex flex-col border-t-[1px] border-black pt-10 sm:pt-16 lg:border-l-[1px] lg:border-t-0 lg:pl-8 lg:pt-0 xl:pl-20">
+            <div className="relative h-12 w-[104px] self-start">
               <Image
                 alt=""
-                src="https://tailwindui.com/img/logos/tuple-logo-gray-900.svg"
                 fill
+                src="https://tailwindui.com/img/logos/reform-logo-gray-900.svg"
                 className="object-contain"
               />
             </div>
             <figure className="mt-10 flex flex-auto flex-col justify-between">
               <blockquote className="text-lg leading-8 text-gray-900">
                 <p>
-                  “Amet amet eget scelerisque tellus sit neque faucibus non
-                  eleifend. Integer eu praesent at a. Ornare arcu gravida
-                  natoque erat et cursus tortor consequat at. Vulputate gravida
-                  sociis enim nullam ultricies habitant malesuada lorem ac.
-                  Tincidunt urna dui pellentesque sagittis.”
+                  “Excepteur veniam labore ullamco eiusmod. Pariatur consequat
+                  proident duis dolore nulla veniam reprehenderit nisi officia
+                  voluptate incididunt exercitation exercitation elit. Nostrud
+                  veniam sint dolor nisi ullamco.”
                 </p>
               </blockquote>
               <figcaption className="mt-10 flex items-center gap-x-6">
@@ -132,22 +128,21 @@ const testimonials = () => {
                   <Image
                     alt=""
                     fill
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
                     className="object-cover rounded-full bg-gray-50"
                   />
                 </div>
                 <div className="text-base">
                   <div className="font-semibold text-gray-900">
-                    Judith Black
+                    Joseph Rodriguez
                   </div>
-                  <div className="mt-1 text-gray-500">CEO of Tuple</div>
+                  <div className="mt-1 text-gray-500">CEO of Reform</div>
                 </div>
               </figcaption>
             </figure>
           </div>
           {/* testimonial 4 */}
-          {/* sm:pt-16 lg:pt-0 */}
-          <div className="flex flex-col border-t-[1px] border-black pt-10 lg:border-l-[1px] lg:border-t-[1px] lg:pl-8 xl:pl-20">
+          <div className="flex flex-col border-t-[1px] border-black pt-10 sm:pt-16 lg:border-l-[1px] lg:border-t-0 lg:pl-8 lg:pt-0 xl:pl-20">
             <div className="relative h-12 w-[104px] self-start">
               <Image
                 alt=""
