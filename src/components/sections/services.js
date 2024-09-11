@@ -217,7 +217,7 @@ const services = () => {
         </div>
       </div>
       {/* row for button */}
-      <div className="mt-12 text-center">
+      <div className="mt-8 text-center">
         {/*  focus:outline-none focus:ring focus:ring-yellow-400 */}
         {/* "inline-block rounded bg-forest-green px-12 py-3 text-base  font-medium hover:bg-opacity-90 text-white" */}
         {/* inline-flex items-center justify-center text-center */}

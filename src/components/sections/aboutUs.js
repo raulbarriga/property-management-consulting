@@ -16,6 +16,7 @@ const aboutUs = () => {
       className="overflow-hidden px-5 pt-0 pb-12 lg:pb-[90px] text-body-color bg-beige-100"
     >
       <h2
+      
         className={`text-black custom-about-lg:mb-5 ${playfairDisplay.className} text-6xl custom-headers-xs:text-[4.5rem] custom-headers:text-[5rem] font-normal text-center pt-20 lg:pt-[120px] pb-12 lg:pb-[90px]`}
         // pb-10
       >
