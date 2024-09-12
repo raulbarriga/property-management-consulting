@@ -1,8 +1,18 @@
 // app/api/contact/route.js
-import nodemailer from "nodemailer";
+// import nodemailer from "nodemailer";
 
 export async function POST(request) {
   try {
+    const { name, email, phone, message } = await request.json();
+    console.log(name, email, phone, message);
+    return Response.json({ name, email, phone, message });
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+/*
+try {
     const { name, email, phone, message } = await request.json();
 
     // Configure your SMTP server credentials
@@ -39,4 +49,4 @@ export async function POST(request) {
       status: 500,
     });
   }
-}
+*/

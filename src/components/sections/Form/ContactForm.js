@@ -5,6 +5,7 @@ import { Open_Sans } from "next/font/google";
 import { useForm } from "react-hook-form";
 import ContactInputBox from "./ContactInputBox";
 import ContactTextArea from "./ContactTextArea";
+import { sendContactForm } from "@/util/api";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
@@ -38,36 +39,41 @@ const ContactForm = () => {
     }));
   };
 
-  const onSubmit = async (e) => {
+  const onSubmit = async (data, e) => {
+    // data is the react hook form object that contains all the form input fields
     e.preventDefault();
 
-    if (!validateEmail(formData.email)) {
-      setSubmissionStatus("Please enter a valid email address.");
-      return;
-    }
+    // if (!validateEmail(formData.email)) {
+    //   setSubmissionStatus("Please enter a valid email address.");
+    //   return;
+    // }
 
     // setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/contact", {
+      console.log("data: ", data);
+      /*
+etch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
-
-      if (response.ok) {
-        // setSubmissionStatus("Message sent successfully!");
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          message: "",
-        });
-      } else {
-        setStatus("error");
-      }
+      */
+      // const response =
+      await sendContactForm(data);
+      // if (response.ok) {
+      // setSubmissionStatus("Message sent successfully!");
+      // setFormData({
+      //   name: "",
+      //   email: "",
+      //   phone: "",
+      //   message: "",
+      // });
+      // } else {
+      //   setStatus("error");
+      // }
     } catch (error) {
       console.error("Error:", error);
       // setSubmissionStatus("Failed to send message.");
@@ -104,7 +110,7 @@ const ContactForm = () => {
                 value: 200,
                 message: "Name must be less than 200 characters",
               },
-              onBlur: onBlurHandler
+              onBlur: onBlurHandler,
             }}
           />
           {errors.name && (
@@ -132,7 +138,7 @@ const ContactForm = () => {
                 value: 128,
                 message: "Email must be less than 128 characters",
               },
-              onBlur: onBlurHandler
+              onBlur: onBlurHandler,
             }}
           />
           {errors.email && (
@@ -155,7 +161,7 @@ const ContactForm = () => {
                 value: 20,
                 message: "Phone must be less than 20 characters",
               },
-              onBlur: onBlurHandler
+              onBlur: onBlurHandler,
             }}
           />
           {errors.phone && (
@@ -175,7 +181,7 @@ const ContactForm = () => {
             register={register}
             validationRules={{
               required: "You must enter your message",
-              onBlur: onBlurHandler
+              onBlur: onBlurHandler,
             }}
           />
           {errors.message && (

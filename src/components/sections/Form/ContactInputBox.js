@@ -6,14 +6,15 @@ const ContactInputBox = ({
   name,
   id,
   register,
-  validationRules
+  validationRules,
 }) => (
   <>
     <label
       htmlFor={id}
       className="mb-[10px] block capitalize text-base font-medium text-black"
     >
-      {name}
+      {name}{" "}
+      {validationRules.required && <span className="text-red-500">*</span>}
     </label>
     <div className="relative">
       <input

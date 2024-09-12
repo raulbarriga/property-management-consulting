@@ -7,7 +7,7 @@ const ContactTextArea = ({
   defaultValue,
   id,
   register,
-  validationRules
+  validationRules,
 }) => {
   // const { onBlur, ...fieldProps } = register(name, validationRules);
 
@@ -17,7 +17,8 @@ const ContactTextArea = ({
         htmlFor={id}
         className="mb-[10px] block capitalize text-base font-medium text-black"
       >
-        {name}
+        {name}{" "}
+        {validationRules.required && <span className="text-red-500">*</span>}
       </label>
       <div className="">
         <textarea
