@@ -10,12 +10,12 @@ import { sendContactForm } from "@/util/api";
 const openSans = Open_Sans({ subsets: ["latin"] });
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   phone: "",
+  //   message: "",
+  // });
   // const [isSubmitting, setIsSubmitting] = useState(false);
 
   const {
@@ -24,20 +24,22 @@ const ContactForm = () => {
     formState: { errors, isSubmitting },
     //
     // reset,
-  } = useForm();
+  } = useForm({
+    defaultValues: { name: "", email: "", phone: "", message: "" },
+  });
 
-  const validateEmail = (email) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-  };
+  // const validateEmail = (email) => {
+  //   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  //   return re.test(email);
+  // };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData((prevState) => ({
+  //     ...prevState,
+  //     [name]: value,
+  //   }));
+  // };
 
   const onSubmit = async (data, e) => {
     // data is the react hook form object that contains all the form input fields
@@ -90,7 +92,6 @@ etch("/api/contact", {
     inputHighlight.style.borderWidth = "1px";
     inputHighlight.style.borderColor = "#ff4040";
   };
-
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -102,7 +103,7 @@ etch("/api/contact", {
             id="name"
             placeholder="Your Name"
             // value={formData.name}
-            onChange={handleChange}
+            // onChange={handleChange}
             register={register}
             validationRules={{
               required: "You must enter your name",
@@ -125,7 +126,7 @@ etch("/api/contact", {
             id="email"
             placeholder="Your Email"
             // value={formData.email}
-            onChange={handleChange}
+            // onChange={handleChange}
             register={register}
             validationRules={{
               required: "You must enter a valid email",
@@ -153,7 +154,7 @@ etch("/api/contact", {
             id="phone"
             placeholder="Your Phone"
             // value={formData.phone}
-            onChange={handleChange}
+            // onChange={handleChange}
             register={register}
             validationRules={{
               required: "You must enter your phone number",
@@ -175,9 +176,9 @@ etch("/api/contact", {
             placeholder="Your Message"
             name="message"
             id="message"
-            defaultValue=""
+            // defaultValue=""
             // value={formData.message}
-            onChange={handleChange}
+            // onChange={handleChange}
             register={register}
             validationRules={{
               required: "You must enter your message",
