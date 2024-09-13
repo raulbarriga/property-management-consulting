@@ -1,28 +1,17 @@
-// app/api/contact/route.js
-import { Resend } from 'resend';
+// using Twilio SendGrid's v3 Node.js Library
+// https://github.com/sendgrid/sendgrid-nodejs
+import sgMail from "@sendgrid/mail";
 
-const resend = new Resend(process.env.CONTACT_FORM_KEY);
+sgMail.setApiKey(process.env.CONTACT_FORM_KEY);
 
 export async function POST(request) {
   try {
     const { name, email, phone, message } = await request.json();
 
-    const transporter = nodemailer.createTransport({
-      host: "smtp.ethereal.email",
-      port: 587,
-      secure: false, // true for port 465, false for other ports
-      auth: {
-        user: "maddison53@ethereal.email",
-        pass: "jn7jnAPss4f63QBp6D",
-      },
-    });
-
-    const { data, error } = await resend.emails.send({
-      from: email,
-      // to: ['delivered@resend.dev'],
-      to: ['raulb@raulbarriga.com'],
-      subject: 'From Contact Form',
-      // react: EmailTemplate({ firstName: 'John' }),
+    const msg = {
+      to: email, // Change to your recipient, process.env.VERIFIED_FROM_EMAIL
+      from: process.env.VERIFIED_FROM_EMAIL, // Change to your verified sender (send email to myself)
+      subject: "Sending From Contact Us Form",
       html: `
       Greetings from ${name}.
       <ul>
@@ -32,16 +21,23 @@ export async function POST(request) {
       <p>Message: ${message}</p>
       </li>
       </ul>
-      `
+      `,
+    };
+
+    await sgMail.send(msg);
+    console.log("No Error")
+
+    return new Response(JSON.stringify({ message: 'Success' }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
     });
-
-    if (error) {
-      return Response.json({ error }, { status: 500 });
-    }
-
-    return Response.json(data);
   } catch (error) {
-    return Response.json({ error }, { status: 500 });
+    console.error("Failed to send email:", error.response.body.errors);
+    
+    return new Response(JSON.stringify({ error: 'Failed to send email' }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 }
 

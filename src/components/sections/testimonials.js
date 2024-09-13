@@ -9,7 +9,7 @@ const testimonials = () => {
   return (
     <section
       id="services"
-      className={`${openSans.className} bg-beige-100 text-black`}
+      className={`${openSans.className} bg-beige-100 text-black pb-12 lg:pb-[90px]`}
     >
       {/* */}
       <h2
