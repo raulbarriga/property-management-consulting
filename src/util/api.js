@@ -1,3 +1,4 @@
+// for front end contact form
 export const sendContactForm = async (data) => fetch('/api/contact', {
     method: "POST",
     body: JSON.stringify(data),

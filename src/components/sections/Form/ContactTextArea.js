@@ -4,12 +4,10 @@ const ContactTextArea = ({
   row,
   placeholder,
   name,
-  // defaultValue,
   id,
   register,
   validationRules,
 }) => {
-  // const { onBlur, ...fieldProps } = register(name, validationRules);
 
   return (
     <>
@@ -25,11 +23,7 @@ const ContactTextArea = ({
           rows={row}
           placeholder={placeholder}
           name={name}
-          // contactt form blur not working for input fields, except for name field
           className="w-full bg-[#efe5dc] resize-none rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none border-black"
-          // onBlur={onBlur}
-          // defaultValue={defaultValue}
-          // {...fieldProps}
           {...register(name, validationRules)}
         />
       </div>

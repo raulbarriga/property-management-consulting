@@ -1,17 +1,59 @@
 // app/api/contact/route.js
-// import nodemailer from "nodemailer";
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.CONTACT_FORM_KEY);
 
 export async function POST(request) {
   try {
     const { name, email, phone, message } = await request.json();
-    console.log(name, email, phone, message);
-    return Response.json({ name, email, phone, message });
+
+    const transporter = nodemailer.createTransport({
+      host: "smtp.ethereal.email",
+      port: 587,
+      secure: false, // true for port 465, false for other ports
+      auth: {
+        user: "maddison53@ethereal.email",
+        pass: "jn7jnAPss4f63QBp6D",
+      },
+    });
+
+    const { data, error } = await resend.emails.send({
+      from: email,
+      // to: ['delivered@resend.dev'],
+      to: ['raulb@raulbarriga.com'],
+      subject: 'From Contact Form',
+      // react: EmailTemplate({ firstName: 'John' }),
+      html: `
+      Greetings from ${name}.
+      <ul>
+      <li>Phone: ${phone}</li>
+      <li>email: ${email}</li>
+      <li>
+      <p>Message: ${message}</p>
+      </li>
+      </ul>
+      `
+    });
+
+    if (error) {
+      return Response.json({ error }, { status: 500 });
+    }
+
+    return Response.json(data);
   } catch (error) {
-    console.error(error);
+    return Response.json({ error }, { status: 500 });
   }
 }
 
 /*
+try {
+    const { name, email, phone, message } = await request.json();
+    // console.log(name, email, phone, message);
+    return Response.json({ name, email, phone, message });
+  } catch (error) {
+    console.error(error);
+  }
+
 try {
     const { name, email, phone, message } = await request.json();
 

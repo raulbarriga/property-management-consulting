@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Open_Sans } from "next/font/google";
 import { useForm } from "react-hook-form";
 import ContactInputBox from "./ContactInputBox";
@@ -10,36 +10,19 @@ import { sendContactForm } from "@/util/api";
 const openSans = Open_Sans({ subsets: ["latin"] });
 
 const ContactForm = () => {
-  // const [formData, setFormData] = useState({
-  //   name: "",
-  //   email: "",
-  //   phone: "",
-  //   message: "",
-  // });
-  // const [isSubmitting, setIsSubmitting] = useState(false);
-
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors, isSubmitting, isSubmitSuccessful },
     //
-    // reset,
+    reset,
   } = useForm({
     defaultValues: { name: "", email: "", phone: "", message: "" },
   });
 
-  // const validateEmail = (email) => {
-  //   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  //   return re.test(email);
-  // };
-
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setFormData((prevState) => ({
-  //     ...prevState,
-  //     [name]: value,
-  //   }));
-  // };
+  useEffect(() => {
+    reset();
+  }, [isSubmitSuccessful, reset]);
 
   const onSubmit = async (data, e) => {
     // data is the react hook form object that contains all the form input fields
@@ -67,12 +50,6 @@ etch("/api/contact", {
       await sendContactForm(data);
       // if (response.ok) {
       // setSubmissionStatus("Message sent successfully!");
-      // setFormData({
-      //   name: "",
-      //   email: "",
-      //   phone: "",
-      //   message: "",
-      // });
       // } else {
       //   setStatus("error");
       // }
@@ -80,18 +57,16 @@ etch("/api/contact", {
       console.error("Error:", error);
       // setSubmissionStatus("Failed to send message.");
     }
-    // finally {
-    //   setIsSubmitting(false);
-    // }
   };
 
-  const onBlurHandler = (e) => {
-    const inputHighlight = e.target;
+  // const onBlurHandler = (e) => {
+  //   const inputHighlight = e.target;
 
-    inputHighlight.style.backgroundColor = "#ff40401a";
-    inputHighlight.style.borderWidth = "1px";
-    inputHighlight.style.borderColor = "#ff4040";
-  };
+  //   inputHighlight.style.backgroundColor = "#ff40401a";
+  //   inputHighlight.style.borderWidth = "1px";
+  //   inputHighlight.style.borderColor = "#ff4040";
+  // };
+
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -102,8 +77,6 @@ etch("/api/contact", {
             name="name"
             id="name"
             placeholder="Your Name"
-            // value={formData.name}
-            // onChange={handleChange}
             register={register}
             validationRules={{
               required: "You must enter your name",
@@ -111,7 +84,7 @@ etch("/api/contact", {
                 value: 200,
                 message: "Name must be less than 200 characters",
               },
-              onBlur: onBlurHandler,
+              // onBlur: onBlurHandler,
             }}
           />
           {errors.name && (
@@ -125,8 +98,6 @@ etch("/api/contact", {
             name="email"
             id="email"
             placeholder="Your Email"
-            // value={formData.email}
-            // onChange={handleChange}
             register={register}
             validationRules={{
               required: "You must enter a valid email",
@@ -139,7 +110,7 @@ etch("/api/contact", {
                 value: 128,
                 message: "Email must be less than 128 characters",
               },
-              onBlur: onBlurHandler,
+              // onBlur: onBlurHandler,
             }}
           />
           {errors.email && (
@@ -153,8 +124,6 @@ etch("/api/contact", {
             name="phone"
             id="phone"
             placeholder="Your Phone"
-            // value={formData.phone}
-            // onChange={handleChange}
             register={register}
             validationRules={{
               required: "You must enter your phone number",
@@ -162,7 +131,7 @@ etch("/api/contact", {
                 value: 20,
                 message: "Phone must be less than 20 characters",
               },
-              onBlur: onBlurHandler,
+              // onBlur: onBlurHandler,
             }}
           />
           {errors.phone && (
@@ -176,13 +145,10 @@ etch("/api/contact", {
             placeholder="Your Message"
             name="message"
             id="message"
-            // defaultValue=""
-            // value={formData.message}
-            // onChange={handleChange}
             register={register}
             validationRules={{
               required: "You must enter your message",
-              onBlur: onBlurHandler,
+              // onBlur: onBlurHandler,
             }}
           />
           {errors.message && (
@@ -200,7 +166,7 @@ etch("/api/contact", {
             {isSubmitting ? "Sending..." : "Send Message"}
           </button>
         </div>
-        {/* {submissionStatus && <p>{submissionStatus}</p>} */}
+        {isSubmitSuccessful && <p className="">Message Sent Successfully</p>}
       </form>
     </>
   );

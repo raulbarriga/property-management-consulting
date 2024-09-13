@@ -10,7 +10,7 @@ const testimonials = () => {
     <section
       id="services"
       className={`${openSans.className} bg-beige-100 text-black`}
-      >
+    >
       {/* */}
       <h2
         className={`custom-about-lg:mb-5 ${playfairDisplay.className} text-6xl custom-headers-xs:text-[4.5rem] custom-headers:text-[5rem] font-normal text-center pt-20 lg:pt-[120px] pb-12 lg:pb-[90px] px-4 sm:px-6 lg:px-8`}
@@ -32,19 +32,11 @@ const testimonials = () => {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div
           id="testimonial-inner-wrap"
-          className="mx-auto grid max-w-2xl grid-cols-1 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-8 xl:gap-12">
-
+          className="mx-auto grid max-w-2xl grid-cols-1 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-8 xl:gap-12"
+        >
           {/* testimonial 1 */}
           {/* sm:pb-16 lg:pb-0 */}
           <div className="flex flex-col relative lg:after:absolute lg:after:-right-[1rem] xl:after:-right-[1.55rem] lg:after:top-0 lg:after:w-[1px] lg:after:bg-black lg:after:h-[90%] pb-10 lg:pr-8 xl:pr-20 border-solid border-black border-b-[1px] lg:border-none">
-            <div className="relative h-12 w-[105px] self-start">
-              <Image
-                alt=""
-                src="https://tailwindui.com/img/logos/tuple-logo-gray-900.svg"
-                fill
-                className="object-contain"
-              />
-            </div>
             <figure className="mt-10 flex flex-auto flex-col justify-between">
               <blockquote className="text-lg leading-8 text-gray-900">
                 <p>
@@ -77,14 +69,6 @@ const testimonials = () => {
           {/* lg:pt-0 sm:pt-16 sm:pt-16 pt-10 */}
           {/* lg:after:border-t-0 */}
           <div className="flex flex-col relative lg:after:absolute lg:after:-right-0 lg:after:-bottom-[1rem] xl:after:-bottom-[1.55rem] lg:after:w-[90%] lg:after:bg-black lg:after:h-[1px] lg:pl-8 py-10 lg:pb-10 lg:pt-0 xl:pl-20 border-solid border-black border-b-[1px] lg:border-none">
-            <div className="relative h-12 w-[104px] self-start">
-              <Image
-                alt=""
-                fill
-                src="https://tailwindui.com/img/logos/reform-logo-gray-900.svg"
-                className="object-contain"
-              />
-            </div>
             <figure className="mt-10 flex flex-auto flex-col justify-between">
               <blockquote className="text-lg leading-8 text-gray-900">
                 <p>
@@ -116,14 +100,6 @@ const testimonials = () => {
           {/* testimonial 3 */}
           {/* pb-10 sm:pb-16 */}
           <div className="flex flex-col py-10 lg:pb-0 lg:pr-8 xl:pr-20 relative lg:after:absolute lg:after:-left-0 lg:after:-top-[1rem] xl:after:-top-[1.55rem] lg:after:w-[90%] lg:after:bg-black lg:after:h-[1px] border-solid border-black border-b-[1px] lg:border-none">
-            <div className="relative h-12 w-[105px] self-start">
-              <Image
-                alt=""
-                src="https://tailwindui.com/img/logos/tuple-logo-gray-900.svg"
-                fill
-                className="object-contain"
-              />
-            </div>
             <figure className="mt-10 flex flex-auto flex-col justify-between">
               <blockquote className="text-lg leading-8 text-gray-900">
                 <p>
@@ -155,14 +131,6 @@ const testimonials = () => {
           {/* testimonial 4 */}
           {/* sm:pt-16 lg:pt-0 */}
           <div className="flex flex-col relative lg:before:absolute lg:before:-left-[1rem] xl:before:-left-[1.55rem] lg:before:bottom-0 lg:before:w-[1px] lg:before:bg-black lg:before:h-[90%] pt-10 lg:pl-8 xl:pl-20">
-            <div className="relative h-12 w-[104px] self-start">
-              <Image
-                alt=""
-                fill
-                src="https://tailwindui.com/img/logos/reform-logo-gray-900.svg"
-                className="object-contain"
-              />
-            </div>
             <figure className="mt-10 flex flex-auto flex-col justify-between">
               <blockquote className="text-lg leading-8 text-gray-900">
                 <p>
