@@ -14,48 +14,27 @@ const ContactForm = () => {
     register,
     handleSubmit,
     formState: { errors, isSubmitting, isSubmitSuccessful },
-    //
     reset,
   } = useForm({
     defaultValues: { name: "", email: "", phone: "", message: "" },
   });
 
   useEffect(() => {
-    reset();
+    if (isSubmitSuccessful) {
+      reset();  // Only reset after a successful submission
+    }
   }, [isSubmitSuccessful, reset]);
 
   const onSubmit = async (data, e) => {
     // data is the react hook form object that contains all the form input fields
     e.preventDefault();
 
-    // if (!validateEmail(formData.email)) {
-    //   setSubmissionStatus("Please enter a valid email address.");
-    //   return;
-    // }
-
-    // setIsSubmitting(true);
-
     try {
       console.log("data: ", data);
-      /*
-etch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      */
-      // const response =
+      
       await sendContactForm(data);
-      // if (response.ok) {
-      // setSubmissionStatus("Message sent successfully!");
-      // } else {
-      //   setStatus("error");
-      // }
     } catch (error) {
       console.error("Error:", error);
-      // setSubmissionStatus("Failed to send message.");
     }
   };
 

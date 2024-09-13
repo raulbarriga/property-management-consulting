@@ -13,7 +13,8 @@ const contactUs = () => {
   return (
     <section
       id="contact-us"
-      className="relative z-10 overflow-hidden bg-beige-100 pb-20 lg:pb-[120px]"
+      // pt-12 lg:pt-[90px]
+      className="relative z-10 overflow-hidden bg-beige-100  pb-20 lg:pb-[120px]"
     >
       <h2
         className={`text-black custom-about-lg:mb-5 ${playfairDisplay.className} text-6xl custom-headers-xs:text-[4.5rem] custom-headers:text-[5rem] font-normal text-center pt-20 lg:pt-[120px] pb-12 lg:pb-[90px]`}
