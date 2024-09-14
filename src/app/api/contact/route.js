@@ -1,17 +1,22 @@
 // using Twilio SendGrid's v3 Node.js Library
 // https://github.com/sendgrid/sendgrid-nodejs
-import sgMail from "@sendgrid/mail";
+// import sgMail from "@sendgrid/mail";
+import { Resend } from "resend";
 
-sgMail.setApiKey(process.env.CONTACT_FORM_KEY);
+const resend = new Resend(process.env.RESEND_API_EMAIL_KEY);
 
-export async function POST(request) {
+export async function POST(req, res) {
   try {
-    const { name, email, phone, message } = await request.json();
+    const { name, email, phone, message } = await req.json();
+    console.log("from server: ", name, email, phone, message);
 
-    const msg = {
-      to: email, // Change to your recipient, process.env.VERIFIED_FROM_EMAIL
-      from: process.env.VERIFIED_FROM_EMAIL, // Change to your verified sender (send email to myself)
+    const { data, error } = await resend.emails.send({
+      to: process.env.VERIFIED_FROM_EMAIL, // where you receive the form submission
+      // to: "raulb@raulbarriga.com", 
+      from: process.env.VERIFIED_FROM_EMAIL, 
+      // from: `${name} <${email}>`, // outputs to: 'Acme <onboarding@resend.dev>'
       subject: "Sending From Contact Us Form",
+      reply_to: email, // Allows to easily reply to the user's email directly
       html: `
       Greetings from ${name}.
       <ul>
@@ -22,22 +27,26 @@ export async function POST(request) {
       </li>
       </ul>
       `,
-    };
-
-    await sgMail.send(msg);
-    console.log("No Error")
-
-    return new Response(JSON.stringify({ message: 'Success' }), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' },
     });
+
+    if (error) {
+      return Response.json({ error }, { status: 500 });
+    }
+    console.log("No Error");
+
+    // return new Response(JSON.stringify({ message: "Success" }), {
+    //   status: 200,
+    //   headers: { "Content-Type": "application/json" },
+    // });
+    return Response.json(data);
   } catch (error) {
     console.error("Failed to send email:", error.response.body.errors);
-    
-    return new Response(JSON.stringify({ error: 'Failed to send email' }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' },
-    });
+
+    // return new Response(JSON.stringify({ error: "Failed to send email" }), {
+    //   status: 500,
+    //   headers: { "Content-Type": "application/json" },
+    // });
+    return Response.json({ error }, { status: 500 });
   }
 }
 
