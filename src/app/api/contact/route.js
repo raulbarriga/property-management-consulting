@@ -9,7 +9,7 @@ export async function POST(request) {
   if (!name || !email || !phone || !message) {
     return Response.json({ error: "Missing required fields" }, { status: 400 });
   }
-  console.log("from server: ", name, email, phone, message);
+  // console.log("from server: ", name, email, phone, message);
 
   const resend = new Resend(process.env.RESEND_API_EMAIL_KEY);
 

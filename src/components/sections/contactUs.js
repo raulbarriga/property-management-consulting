@@ -13,7 +13,6 @@ const contactUs = () => {
   return (
     <section
       id="contact-us"
-      // pt-12 lg:pt-[90px]
       className="relative z-10 overflow-hidden bg-beige-100  pb-20 lg:pb-[120px]"
     >
       <h2
@@ -65,7 +64,7 @@ const contactUs = () => {
                   <p
                     className={`${openSans.className} text-base text-[#6E6E6E]`}
                   >
-                    1234 S Bascom Ave, Suite 456, San Jose, CA 95128
+                    San Jose, CA
                   </p>
                 </div>
               </div>
@@ -107,7 +106,7 @@ const contactUs = () => {
                   <p
                     className={`${openSans.className} text-base text-[#6E6E6E]`}
                   >
-                    (+62)81 414 257 9980
+                    510-340-8658
                   </p>
                 </div>
               </div>

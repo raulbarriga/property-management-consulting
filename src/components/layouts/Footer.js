@@ -87,7 +87,7 @@ const Footer = () => {
             >
               <h4 className="font-semibold text-black">Contact Us</h4>
               <ul className="mt-4 space-y-2 text-body-color">
-                <li className="">012-345-6789</li>
+                <li className="">510-340-8658</li>
                 <li className="">
                   <Link href={"mailto:amanda@primepmconsulting.com"}>
                     amanda@primepmconsulting.com
