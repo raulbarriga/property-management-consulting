@@ -16,10 +16,7 @@ export async function POST(request) {
   try {
     const { data, error } = await resend.emails.send({
       to: process.env.VERIFIED_FROM_EMAIL, // where you receive the form submission
-      // to: "delivered@resend.dev",
       from: process.env.VERIFIED_FROM_EMAIL,
-      // from: "Acme <onboarding@resend.dev>",
-      // from: `Contact Form <${process.env.VERIFIED_FROM_EMAIL}>`, // outputs to: 'Acme <onboarding@resend.dev>'
       subject: "Sending From Contact Us Form",
       reply_to: email, // Allows to easily reply to the user's email directly
       react: ContactFormEmail({ name, email, phone, message }),

@@ -35,16 +35,16 @@ const testimonials = () => {
           className="mx-auto grid max-w-2xl grid-cols-1 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-8 xl:gap-12"
         >
           {/* testimonial 1 */}
-          {/* sm:pb-16 lg:pb-0 */}
           <div className="flex flex-col relative lg:after:absolute lg:after:-right-[1rem] xl:after:-right-[1.55rem] lg:after:top-0 lg:after:w-[1px] lg:after:bg-black lg:after:h-[90%] pb-10 lg:pr-8 xl:pr-20 border-solid border-black border-b-[1px] lg:border-none">
             <figure className="mt-10 flex flex-auto flex-col justify-between">
               <blockquote className="text-lg leading-8 text-gray-900">
                 <p>
-                  “Amet amet eget scelerisque tellus sit neque faucibus non
-                  eleifend. Integer eu praesent at a. Ornare arcu gravida
-                  natoque erat et cursus tortor consequat at. Vulputate gravida
-                  sociis enim nullam ultricies habitant malesuada lorem ac.
-                  Tincidunt urna dui pellentesque sagittis.”
+                  “Working with Prime PM Consulting has been an absolute
+                  game-changer for our property management process. Their
+                  insights and recommendations streamlined our operations and
+                  helped us reduce costs significantly. We now manage our
+                  properties more efficiently and with greater confidence. I
+                  highly recommend their consulting services!”
                 </p>
               </blockquote>
               <figcaption className="mt-10 flex items-center gap-x-6">
@@ -52,7 +52,9 @@ const testimonials = () => {
                   <Image
                     alt=""
                     fill
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                    // src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+
+                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=256&h=256&auto=format&fit=facearea&facepad=2&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     className="object-cover rounded-full bg-gray-50"
                   />
                 </div>
@@ -60,22 +62,22 @@ const testimonials = () => {
                   <div className="font-semibold text-gray-900">
                     Judith Black
                   </div>
-                  <div className="mt-1 text-gray-500">CEO of Tuple</div>
+                  <div className="mt-1 text-gray-500">Property Owner</div>
                 </div>
               </figcaption>
             </figure>
           </div>
           {/* testimonial 2 */}
-          {/* lg:pt-0 sm:pt-16 sm:pt-16 pt-10 */}
-          {/* lg:after:border-t-0 */}
           <div className="flex flex-col relative lg:after:absolute lg:after:-right-0 lg:after:-bottom-[1rem] xl:after:-bottom-[1.55rem] lg:after:w-[90%] lg:after:bg-black lg:after:h-[1px] lg:pl-8 py-10 lg:pb-10 lg:pt-0 xl:pl-20 border-solid border-black border-b-[1px] lg:border-none">
             <figure className="mt-10 flex flex-auto flex-col justify-between">
               <blockquote className="text-lg leading-8 text-gray-900">
                 <p>
-                  “Excepteur veniam labore ullamco eiusmod. Pariatur consequat
-                  proident duis dolore nulla veniam reprehenderit nisi officia
-                  voluptate incididunt exercitation exercitation elit. Nostrud
-                  veniam sint dolor nisi ullamco.”
+                  “We were struggling with tenant turnover and maintenance
+                  issues until we consulted Prime PM Consulting. Their team
+                  quickly identified key areas for improvement and provided
+                  actionable strategies that have increased tenant retention and
+                  improved property maintenance. Their expertise has made a real
+                  difference in our business.”
                 </p>
               </blockquote>
               <figcaption className="mt-10 flex items-center gap-x-6">
@@ -91,23 +93,21 @@ const testimonials = () => {
                   <div className="font-semibold text-gray-900">
                     Joseph Rodriguez
                   </div>
-                  <div className="mt-1 text-gray-500">CEO of Reform</div>
+                  <div className="mt-1 text-gray-500">Property Manager</div>
                 </div>
               </figcaption>
             </figure>
-            {/* <div className="inline-block relative after:block after:absolute after:border-t-[1px] after:border-black lg:after:border-l-[1px]"></div> */}
           </div>
           {/* testimonial 3 */}
-          {/* pb-10 sm:pb-16 */}
           <div className="flex flex-col py-10 lg:pb-0 lg:pr-8 xl:pr-20 relative lg:after:absolute lg:after:-left-0 lg:after:-top-[1rem] xl:after:-top-[1.55rem] lg:after:w-[90%] lg:after:bg-black lg:after:h-[1px] border-solid border-black border-b-[1px] lg:border-none">
             <figure className="mt-10 flex flex-auto flex-col justify-between">
               <blockquote className="text-lg leading-8 text-gray-900">
                 <p>
-                  “Amet amet eget scelerisque tellus sit neque faucibus non
-                  eleifend. Integer eu praesent at a. Ornare arcu gravida
-                  natoque erat et cursus tortor consequat at. Vulputate gravida
-                  sociis enim nullam ultricies habitant malesuada lorem ac.
-                  Tincidunt urna dui pellentesque sagittis.”
+                  “Prime PM Consulting helped us implement better financial
+                  management systems for our portfolio of rental properties.
+                  Their attention to detail and industry knowledge have boosted
+                  our profitability and improved the transparency of our
+                  operations. We couldn&#39;t be happier with the results!”
                 </p>
               </blockquote>
               <figcaption className="mt-10 flex items-center gap-x-6">
@@ -115,29 +115,30 @@ const testimonials = () => {
                   <Image
                     alt=""
                     fill
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                    // src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+
+                    src="https://images.unsplash.com/photo-1619895862022-09114b41f16f?q=80&w=256&h=256&auto=format&fit=facearea&facepad=2&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     className="object-cover rounded-full bg-gray-50"
                   />
                 </div>
                 <div className="text-base">
-                  <div className="font-semibold text-gray-900">
-                    Judith Black
-                  </div>
-                  <div className="mt-1 text-gray-500">CEO of Tuple</div>
+                  <div className="font-semibold text-gray-900">Lisa M.</div>
+                  <div className="mt-1 text-gray-500">Real Estate Investor</div>
                 </div>
               </figcaption>
             </figure>
           </div>
           {/* testimonial 4 */}
-          {/* sm:pt-16 lg:pt-0 */}
           <div className="flex flex-col relative lg:before:absolute lg:before:-left-[1rem] xl:before:-left-[1.55rem] lg:before:bottom-0 lg:before:w-[1px] lg:before:bg-black lg:before:h-[90%] pt-10 lg:pl-8 xl:pl-20">
             <figure className="mt-10 flex flex-auto flex-col justify-between">
               <blockquote className="text-lg leading-8 text-gray-900">
                 <p>
-                  “Excepteur veniam labore ullamco eiusmod. Pariatur consequat
-                  proident duis dolore nulla veniam reprehenderit nisi officia
-                  voluptate incididunt exercitation exercitation elit. Nostrud
-                  veniam sint dolor nisi ullamco.”
+                  “As a first-time property owner, I was overwhelmed by the
+                  complexities of managing multiple units. The consultants at
+                  Prime PM Consulting walked me through every step of the
+                  process, from tenant screening to lease agreements. Their
+                  support has been invaluable, and I feel much more confident in
+                  handling my properties now.”
                 </p>
               </blockquote>
               <figcaption className="mt-10 flex items-center gap-x-6">
@@ -145,15 +146,15 @@ const testimonials = () => {
                   <Image
                     alt=""
                     fill
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                    // src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+
+                    src="https://images.unsplash.com/photo-1639747280804-dd2d6b3d88ac?q=80&w=256&h=256&auto=format&fit=facearea&facepad=2&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     className="object-cover rounded-full bg-gray-50"
                   />
                 </div>
                 <div className="text-base">
-                  <div className="font-semibold text-gray-900">
-                    Joseph Rodriguez
-                  </div>
-                  <div className="mt-1 text-gray-500">CEO of Reform</div>
+                  <div className="font-semibold text-gray-900">David R.</div>
+                  <div className="mt-1 text-gray-500">New Property Owner</div>
                 </div>
               </figcaption>
             </figure>
